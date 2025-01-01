@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item.html#var">Var Details</a> - <a href="obj/item.html#proc">Proc Details</a></header>
+<main>
+<h1>item <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/inhands_rogue.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;inhands_rogue.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item.html#var/anvilrepair">anvilrepair</a></th><td>The appropriate skill to repair this obj/item. If null, our object cannot be placed on an anvil to be repaired</td></tr>
+            <tr><th><a href="obj/item.html#var/blade_int">blade_int</a></th><td>Current blade integrity</td></tr>
+            <tr><th><a href="obj/item.html#var/blocksound">blocksound</a></th><td>played when an item that is equipped blocks a hit</td></tr>
+            <tr><th><a href="obj/item.html#var/dismember_blade_int">dismember_blade_int</a></th><td>Blade integrity at which dismemberment reaches 100% effectiveness</td></tr>
+            <tr><th><a href="obj/item.html#var/drop_sound">drop_sound</a></th><td>Sound uses when dropping the item, or when its thrown.</td></tr>
+            <tr><th><a href="obj/item.html#var/dye_color">dye_color</a></th><td>Used as the dye color source in the washing machine only (at the moment). Can be a hex color or a key corresponding to a registry entry, see washing_machine.dm</td></tr>
+            <tr><th><a href="obj/item.html#var/dying_key">dying_key</a></th><td>What dye registry should be looked at when dying this item; see washing_machine.dm</td></tr>
+            <tr><th><a href="obj/item.html#var/equip_sound">equip_sound</a></th><td>Sound used when equipping the item into a valid slot</td></tr>
+            <tr><th><a href="obj/item.html#var/item_state">item_state</a></th><td>icon state name for inhanf overlays</td></tr>
+            <tr><th><a href="obj/item.html#var/lefthand_file">lefthand_file</a></th><td>Icon file for left hand inhand overlays</td></tr>
+            <tr><th><a href="obj/item.html#var/max_blade_int">max_blade_int</a></th><td>Maximum blade integrity</td></tr>
+            <tr><th><a href="obj/item.html#var/mob_overlay_icon">mob_overlay_icon</a></th><td>Icon file for mob worn overlays.
+no var for state because it should <em>always</em> be the same as icon_state</td></tr>
+            <tr><th><a href="obj/item.html#var/mob_throw_hit_sound">mob_throw_hit_sound</a></th><td>Used when yate into a mob</td></tr>
+            <tr><th><a href="obj/item.html#var/muteinmouth">muteinmouth</a></th><td>trying to emote or talk with this in our mouth makes us muffled</td></tr>
+            <tr><th><a href="obj/item.html#var/onprop">onprop</a></th><td>A lazylist to store inhands data.</td></tr>
+            <tr><th><a href="obj/item.html#var/pickup_sound">pickup_sound</a></th><td>Sound uses when picking the item up (into my hands)</td></tr>
+            <tr><th><a href="obj/item.html#var/required_repair_skill">required_repair_skill</a></th><td>Required skill to repair the blade integrity</td></tr>
+            <tr><th><a href="obj/item.html#var/righthand_file">righthand_file</a></th><td>Icon file for right inhand overlays</td></tr>
+            <tr><th><a href="obj/item.html#var/sharpness">sharpness</a></th><td>All items with sharpness of IS_SHARP or higher will automatically get the butchering component.</td></tr>
+            <tr><th><a href="obj/item.html#var/spitoutmouth">spitoutmouth</a></th><td>using spit emote spits the item out of our mouth and falls out after some time</td></tr>
+            <tr><th><a href="obj/item.html#var/undyeable">undyeable</a></th><td>Whether the item is unaffected by standard dying.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item.html#proc/attack_self">attack_self</a></th><td>Let's reserve his other hand~</td></tr>
+            <tr><th><a href="obj/item.html#proc/get_sharpness">get_sharpness</a></th><td>Returns the sharpness of src. If you want to get the sharpness of an item use this.</td></tr>
+            <tr><th><a href="obj/item.html#proc/get_temperature">get_temperature</a></th><td>Returns the temperature of src. If you want to know if an item is hot use this proc.</td></tr>
+            <tr><th><a href="obj/item.html#proc/melee_attack_chain">melee_attack_chain</a></th><td>This is the proc that handles the order of an item_attack.
+The order of procs called is:
+tool_act on the target. If it returns TRUE, the chain will be stopped.
+pre_attack() on src. If this returns TRUE, the chain will be stopped.
+attackby on the target. If it returns TRUE, the chain will be stopped.
+and lastly
+afterattack. The return value does not matter.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/anvilrepair"><aside class="declaration">var </aside>anvilrepair
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L188">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 188"/></a></h3>
+        <p>The appropriate skill to repair this obj/item. If null, our object cannot be placed on an anvil to be repaired</p><h3 id="var/blade_int"><aside class="declaration">var </aside>blade_int
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items/rogueweapons/integrity.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;rogueweapons&#x2F;integrity.dm 3"/></a></h3>
+        <p>Current blade integrity</p><h3 id="var/blocksound"><aside class="declaration">var </aside>blocksound
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L204">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 204"/></a></h3>
+        <p>played when an item that is equipped blocks a hit</p><h3 id="var/dismember_blade_int"><aside class="declaration">var </aside>dismember_blade_int
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items/rogueweapons/integrity.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;rogueweapons&#x2F;integrity.dm 5"/></a></h3>
+        <p>Blade integrity at which dismemberment reaches 100% effectiveness</p><h3 id="var/drop_sound"><aside class="declaration">var </aside>drop_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 49"/></a></h3>
+        <p>Sound uses when dropping the item, or when its thrown.</p><h3 id="var/dye_color"><aside class="declaration">var </aside>dye_color
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L125">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 125"/></a></h3>
+        <p>Used as the dye color source in the washing machine only (at the moment). Can be a hex color or a key corresponding to a registry entry, see washing_machine.dm</p><h3 id="var/dying_key"><aside class="declaration">var </aside>dying_key
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L129">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 129"/></a></h3>
+        <p>What dye registry should be looked at when dying this item; see washing_machine.dm</p><h3 id="var/equip_sound"><aside class="declaration">var </aside>equip_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 45"/></a></h3>
+        <p>Sound used when equipping the item into a valid slot</p><h3 id="var/item_state"><aside class="declaration">var </aside>item_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 12"/></a></h3>
+        <p>icon state name for inhanf overlays</p><h3 id="var/lefthand_file"><aside class="declaration">var </aside>lefthand_file
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 14"/></a></h3>
+        <p>Icon file for left hand inhand overlays</p><h3 id="var/max_blade_int"><aside class="declaration">var </aside>max_blade_int
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items/rogueweapons/integrity.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;rogueweapons&#x2F;integrity.dm 7"/></a></h3>
+        <p>Maximum blade integrity</p><h3 id="var/mob_overlay_icon"><aside class="declaration">var </aside>mob_overlay_icon
+            <aside>&ndash; /icon</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 20"/></a></h3>
+        <p>Icon file for mob worn overlays.
+no var for state because it should <em>always</em> be the same as icon_state</p><h3 id="var/mob_throw_hit_sound"><aside class="declaration">var </aside>mob_throw_hit_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 43"/></a></h3>
+        <p>Used when yate into a mob</p><h3 id="var/muteinmouth"><aside class="declaration">var </aside>muteinmouth
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L181">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 181"/></a></h3>
+        <p>trying to emote or talk with this in our mouth makes us muffled</p><h3 id="var/onprop"><aside class="declaration">var </aside>onprop
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/inhands_rogue.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;inhands_rogue.dm 3"/></a></h3>
+        <p>A lazylist to store inhands data.</p><h3 id="var/pickup_sound"><aside class="declaration">var </aside>pickup_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 47"/></a></h3>
+        <p>Sound uses when picking the item up (into my hands)</p><h3 id="var/required_repair_skill"><aside class="declaration">var </aside>required_repair_skill
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items/rogueweapons/integrity.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;rogueweapons&#x2F;integrity.dm 9"/></a></h3>
+        <p>Required skill to repair the blade integrity</p><h3 id="var/righthand_file"><aside class="declaration">var </aside>righthand_file
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 16"/></a></h3>
+        <p>Icon file for right inhand overlays</p><h3 id="var/sharpness"><aside class="declaration">var </aside>sharpness
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L101">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 101"/></a></h3>
+        <p>All items with sharpness of IS_SHARP or higher will automatically get the butchering component.</p><h3 id="var/spitoutmouth"><aside class="declaration">var </aside>spitoutmouth
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L183">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 183"/></a></h3>
+        <p>using spit emote spits the item out of our mouth and falls out after some time</p><h3 id="var/undyeable"><aside class="declaration">var </aside>undyeable
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L127">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 127"/></a></h3>
+        <p>Whether the item is unaffected by standard dying.</p><h2 id="proc">Proc Details</h2><h3 id="proc/attack_self"><aside class="declaration">proc </aside>attack_self<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L1254">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1254"/></a></aside>
+        </h3>
+        <p>Let's reserve his other hand~</p><h3 id="proc/get_sharpness"><aside class="declaration">proc </aside>get_sharpness<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L953">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 953"/></a></aside>
+        </h3>
+        <p>Returns the sharpness of src. If you want to get the sharpness of an item use this.</p><h3 id="proc/get_temperature"><aside class="declaration">proc </aside>get_temperature<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/objects/items.dm#L949">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 949"/></a></aside>
+        </h3>
+        <p>Returns the temperature of src. If you want to know if an item is hot use this proc.</p><h3 id="proc/melee_attack_chain"><aside class="declaration">proc </aside>melee_attack_chain<aside>(/<a href="mob.html">mob</a>/user, /<a href="atom.html">atom</a>/target, params) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/_onclick/item_attack.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;item_attack.dm 10"/></a></aside>
+        </h3>
+        <p>This is the proc that handles the order of an item_attack.
+The order of procs called is:
+tool_act on the target. If it returns TRUE, the chain will be stopped.
+pre_attack() on src. If this returns TRUE, the chain will be stopped.
+attackby on the target. If it returns TRUE, the chain will be stopped.
+and lastly
+afterattack. The return value does not matter.</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;bodypart - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/bodypart.html#var">Var Details</a> - <a href="obj/item/bodypart.html#proc">Proc Details</a></header>
+<main>
+<h1>bodypart <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/_bodyparts.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;_bodyparts.dm 2"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/attach_wound">attach_wound</a></th><td>Wound we get when surgically reattached</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/bandage">bandage</a></th><td>Bandage, if this ever hard dels thats fucking silly lol</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/bodypart_features">bodypart_features</a></th><td>Visual features of the bodypart, such as hair and accessories</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/dismember_wound">dismember_wound</a></th><td>Wound we leave on the chest when violently dismembered</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/dismemsound">dismemsound</a></th><td>Sound we make when violently dismembered</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/embedded_objects">embedded_objects</a></th><td>List of items embedded in this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/markings">markings</a></th><td>Visaul markings to be rendered alongside the bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#var/wounds">wounds</a></th><td>List of /datum/wound instances affecting this bodypart</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/add_embedded_object">add_embedded_object</a></th><td>Embeds an object in this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/add_wound">add_wound</a></th><td>Adds a wound to this bodypart, applying any necessary effects</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/bodypart_attacked_by">bodypart_attacked_by</a></th><td>Called after a bodypart is attacked so that wounds and critical effects can be applied</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/can_bloody_wound">can_bloody_wound</a></th><td>Check to see if we can apply a bleeding wound on this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/get_bleed_rate">get_bleed_rate</a></th><td>Returns the total bleed rate on this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/get_organs">get_organs</a></th><td>since organs aren't actually stored in the bodypart themselves while attached to a person, we have to query the owner for what we should have</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/get_sewable_wounds">get_sewable_wounds</a></th><td>Returns all wounds on this limb that can be sewn</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/get_surgery_flags">get_surgery_flags</a></th><td>Returns surgery flags applicable to this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/has_embedded_object">has_embedded_object</a></th><td>Checks if we have an embedded object of a specific type</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/has_embedded_objects">has_embedded_objects</a></th><td>Checks if we have any embedded objects whatsoever</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/has_wound">has_wound</a></th><td>Returns the first wound of the specified type on this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/heal_wounds">heal_wounds</a></th><td>Heals wounds on this bodypart by the specified amount</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/is_object_embedded">is_object_embedded</a></th><td>Checks if an object is embedded in us</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/remove_crit_paralysis">remove_crit_paralysis</a></th><td>Removes the temporary paralysis effect from this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/remove_embedded_object">remove_embedded_object</a></th><td>Removes an embedded object from this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/remove_wound">remove_wound</a></th><td>Removes a wound from this bodypart, removing any associated effects</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/temporary_crit_paralysis">temporary_crit_paralysis</a></th><td>Applies a temporary paralysis effect to this bodypart</td></tr>
+            <tr><th><a href="obj/item/bodypart.html#proc/try_crit">try_crit</a></th><td>Behemoth of a proc used to apply a wound after a bodypart is damaged in an attack</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/attach_wound"><aside class="declaration">var </aside>attach_wound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_dismemberment.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_dismemberment.dm 10"/></a></h3>
+        <p>Wound we get when surgically reattached</p><h3 id="var/bandage"><aside class="declaration">var </aside>bandage
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 9"/></a></h3>
+        <p>Bandage, if this ever hard dels thats fucking silly lol</p><h3 id="var/bodypart_features"><aside class="declaration">var </aside>bodypart_features
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/_bodyparts.dm#L93">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;_bodyparts.dm 93"/></a></h3>
+        <p>Visual features of the bodypart, such as hair and accessories</p><h3 id="var/dismember_wound"><aside class="declaration">var </aside>dismember_wound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_dismemberment.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_dismemberment.dm 12"/></a></h3>
+        <p>Wound we leave on the chest when violently dismembered</p><h3 id="var/dismemsound"><aside class="declaration">var </aside>dismemsound
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_dismemberment.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_dismemberment.dm 14"/></a></h3>
+        <p>Sound we make when violently dismembered</p><h3 id="var/embedded_objects"><aside class="declaration">var </aside>embedded_objects
+            <aside>&ndash; /list/obj/item</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 5"/></a></h3>
+        <p>List of items embedded in this bodypart</p><h3 id="var/markings"><aside class="declaration">var </aside>markings
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/_bodyparts.dm#L90">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;_bodyparts.dm 90"/></a></h3>
+        <p>Visaul markings to be rendered alongside the bodypart</p><h3 id="var/wounds"><aside class="declaration">var </aside>wounds
+            <aside>&ndash; /list/datum/wound</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 3"/></a></h3>
+        <p>List of /datum/wound instances affecting this bodypart</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_embedded_object"><aside class="declaration">proc </aside>add_embedded_object<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L388">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 388"/></a></aside>
+        </h3>
+        <p>Embeds an object in this bodypart</p><h3 id="proc/add_wound"><aside class="declaration">proc </aside>add_wound<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/wound, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 60"/></a></aside>
+        </h3>
+        <p>Adds a wound to this bodypart, applying any necessary effects</p><h3 id="proc/bodypart_attacked_by"><aside class="declaration">proc </aside>bodypart_attacked_by<aside>(bclass, dam, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, zone_precise, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L118">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 118"/></a></aside>
+        </h3>
+        <p>Called after a bodypart is attacked so that wounds and critical effects can be applied</p><h3 id="proc/can_bloody_wound"><aside class="declaration">proc </aside>can_bloody_wound<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 89"/></a></aside>
+        </h3>
+        <p>Check to see if we can apply a bleeding wound on this bodypart</p><h3 id="proc/get_bleed_rate"><aside class="declaration">proc </aside>get_bleed_rate<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L99">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 99"/></a></aside>
+        </h3>
+        <p>Returns the total bleed rate on this bodypart</p><h3 id="proc/get_organs"><aside class="declaration">proc </aside>get_organs<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/_bodyparts.dm#L557">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;_bodyparts.dm 557"/></a></aside>
+        </h3>
+        <p>since organs aren't actually stored in the bodypart themselves while attached to a person, we have to query the owner for what we should have</p><h3 id="proc/get_sewable_wounds"><aside class="declaration">proc </aside>get_sewable_wounds<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 29"/></a></aside>
+        </h3>
+        <p>Returns all wounds on this limb that can be sewn</p><h3 id="proc/get_surgery_flags"><aside class="declaration">proc </aside>get_surgery_flags<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L502">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 502"/></a></aside>
+        </h3>
+        <p>Returns surgery flags applicable to this bodypart</p><h3 id="proc/has_embedded_object"><aside class="declaration">proc </aside>has_embedded_object<aside>(path, specific) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 14"/></a></aside>
+        </h3>
+        <p>Checks if we have an embedded object of a specific type</p><h3 id="proc/has_embedded_objects"><aside class="declaration">proc </aside>has_embedded_objects<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 10"/></a></aside>
+        </h3>
+        <p>Checks if we have any embedded objects whatsoever</p><h3 id="proc/has_wound"><aside class="declaration">proc </aside>has_wound<aside>(path, specific) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 38"/></a></aside>
+        </h3>
+        <p>Returns the first wound of the specified type on this bodypart</p><h3 id="proc/heal_wounds"><aside class="declaration">proc </aside>heal_wounds<aside>(heal_amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 47"/></a></aside>
+        </h3>
+        <p>Heals wounds on this bodypart by the specified amount</p><h3 id="proc/is_object_embedded"><aside class="declaration">proc </aside>is_object_embedded<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 23"/></a></aside>
+        </h3>
+        <p>Checks if an object is embedded in us</p><h3 id="proc/remove_crit_paralysis"><aside class="declaration">proc </aside>remove_crit_paralysis<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L494">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 494"/></a></aside>
+        </h3>
+        <p>Removes the temporary paralysis effect from this bodypart</p><h3 id="proc/remove_embedded_object"><aside class="declaration">proc </aside>remove_embedded_object<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L408">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 408"/></a></aside>
+        </h3>
+        <p>Removes an embedded object from this bodypart</p><h3 id="proc/remove_wound"><aside class="declaration">proc </aside>remove_wound<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/wound) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 79"/></a></aside>
+        </h3>
+        <p>Removes a wound from this bodypart, removing any associated effects</p><h3 id="proc/temporary_crit_paralysis"><aside class="declaration">proc </aside>temporary_crit_paralysis<aside>(duration, brittle) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L482">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 482"/></a></aside>
+        </h3>
+        <p>Applies a temporary paralysis effect to this bodypart</p><h3 id="proc/try_crit"><aside class="declaration">proc </aside>try_crit<aside>(bclass, dam, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, zone_precise, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/bodyparts/bodypart_wounds.dm#L178">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;bodyparts&#x2F;bodypart_wounds.dm 178"/></a></aside>
+        </h3>
+        <p>Behemoth of a proc used to apply a wound after a bodypart is damaged in an attack</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

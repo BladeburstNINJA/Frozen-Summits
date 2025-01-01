@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>(global) - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="global.html#var">Var Details</a> - <a href="global.html#proc">Proc Details</a></header>
+<main>
+<h1>(global)
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/(unknown)">
+        <img src="git.png" width="16" height="16" title="(unknown)"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="global.html#var/Failsafe">Failsafe</a></th><td>Failsafe</td></tr>
+            <tr><th><a href="global.html#var/Master">Master</a></th><td>StonedMC</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="global.html#proc/Gibberish">Gibberish</a></th><td>Turn text into complete gibberish!</td></tr>
+            <tr><th><a href="global.html#proc/IsAdminGhost">IsAdminGhost</a></th><td>Is the passed in mob an admin ghost</td></tr>
+            <tr><th><a href="global.html#proc/___TraitAdd">___TraitAdd</a></th><td>DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.</td></tr>
+            <tr><th><a href="global.html#proc/___TraitRemove">___TraitRemove</a></th><td>DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.</td></tr>
+            <tr><th><a href="global.html#proc/above_neck">above_neck</a></th><td>Would this zone be above the neck</td></tr>
+            <tr><th><a href="global.html#proc/add_keybinding">add_keybinding</a></th><td>Adds an instanced keybinding to the global tracker</td></tr>
+            <tr><th><a href="global.html#proc/addtimer">addtimer</a></th><td>Create a new timer and insert it in the queue</td></tr>
+            <tr><th><a href="global.html#proc/adminscrub">adminscrub</a></th><td>Runs STRIP_HTML_SIMPLE and byond's sanitization proc.</td></tr>
+            <tr><th><a href="global.html#proc/apply_random_special_trait">apply_random_special_trait</a></th><td>Applies random special trait IF the client has specials enabled in prefs</td></tr>
+            <tr><th><a href="global.html#proc/autopunct_bare">autopunct_bare</a></th><td>Ensures sentences end in appropriate punctuation (a period if none exist) and that all whitespace-bounded 'i' characters are capitalized.
+If the sentence ends in chat-flavored markdown for bolds, italics or underscores and does not have a preceding period, exclamation mark or other flavored sentence terminator, add a period.
+(e.g: 'Borgs are rogue' becomes 'Borgs are rogue.', '+BORGS ARE ROGUE+ becomes '+BORGS ARE ROGUE+.', '+Borgs are rogue~+' is untouched.)</td></tr>
+            <tr><th><a href="global.html#proc/build_coalesce_description">build_coalesce_description</a></th><td>Print the remaining ones in seperate lines</td></tr>
+            <tr><th><a href="global.html#proc/callback_select">callback_select</a></th><td>Runs a list of callbacks asyncronously, returning only when all have finished</td></tr>
+            <tr><th><a href="global.html#proc/check_zone">check_zone</a></th><td>Convert a PRECISE ZONE into the BODY_ZONE</td></tr>
+            <tr><th><a href="global.html#proc/color_key_source_list_from_carbon">color_key_source_list_from_carbon</a></th><td>Read specific organ entries to deduce eye, hair and facial hair color</td></tr>
+            <tr><th><a href="global.html#proc/color_list_to_string">color_list_to_string</a></th><td>Turns a list such as (&quot;#FFFFFF&quot;, #00FFFF) into a color string of &quot;#FFFFFF#00FFFF&quot;</td></tr>
+            <tr><th><a href="global.html#proc/color_string_to_list">color_string_to_list</a></th><td>Turns a color string such as &quot;#FFFFFF#00FFFF&quot; into a list of (&quot;#FFFFFF&quot;, #00FFFF)</td></tr>
+            <tr><th><a href="global.html#proc/completed_bounty_count">completed_bounty_count</a></th><td>Subtype Gens</td></tr>
+            <tr><th><a href="global.html#proc/compose_bounty">compose_bounty</a></th><td>Composes a random bounty banner based on the given bounty info.
+@param new_bounty:  The bounty datum.</td></tr>
+            <tr><th><a href="global.html#proc/considered_exiled">considered_exiled</a></th><td>Exiled check</td></tr>
+            <tr><th><a href="global.html#proc/cultslur">cultslur</a></th><td>Makes you talk like you got cult stunned, which is slurring but with some dark messages</td></tr>
+            <tr><th><a href="global.html#proc/deltimer">deltimer</a></th><td>Delete a timer</td></tr>
+            <tr><th><a href="global.html#proc/derpspeech">derpspeech</a></th><td>Convert a message to derpy speak</td></tr>
+            <tr><th><a href="global.html#proc/end_cooldown">end_cooldown</a></th><td>Callback called by a timer to end an associative-list-indexed cooldown.</td></tr>
+            <tr><th><a href="global.html#proc/find_record">find_record</a></th><td>Returns datum/data/record</td></tr>
+            <tr><th><a href="global.html#proc/findname">findname</a></th><td>Find if the message has the real name of any user mob in the mob_list</td></tr>
+            <tr><th><a href="global.html#proc/getFlatIcon">getFlatIcon</a></th><td>Create a single <a href="https://www.byond.com/docs/ref/#/icon" title="/icon">/icon</a> from a given <a href="atom.html" title="/atom">/atom</a> or <a href="https://www.byond.com/docs/ref/#/image" title="/image">/image</a>.</td></tr>
+            <tr><th><a href="global.html#proc/get_flat_existing_human_icon">get_flat_existing_human_icon</a></th><td>A simpler version of get_flat_human_icon() that uses an existing human as a base to create the icon.
+Does not feature caching yet, since I could not think of a good way to cache them without having a possibility
+of using the cached version when we don't want to, so only use this proc if you just need this flat icon
+generated once and handle the caching yourself if you need to access that icon multiple times, or
+refactor this proc to feature caching of icons.</td></tr>
+            <tr><th><a href="global.html#proc/get_icon_dimensions">get_icon_dimensions</a></th><td>Returns a list containing the width and height of an icon file</td></tr>
+            <tr><th><a href="global.html#proc/getleftblocks">getleftblocks</a></th><td>DNA HELPER-PROCS</td></tr>
+            <tr><th><a href="global.html#proc/goonchem_vortex">goonchem_vortex</a></th><td>Simulates a vortex that moves nearby movable atoms towards or away from the turf T. Range also determines the strength of the effect. High values cause nearby objects to be thrown.</td></tr>
+            <tr><th><a href="global.html#proc/grant_lit_torch">grant_lit_torch</a></th><td>FOR SOME silly FUCKING REASON THIS REFUSED TO WORK WITHOUT A FUCKING TIMER IT JUST FUCKED SHIT UP</td></tr>
+            <tr><th><a href="global.html#proc/init_keybindings">init_keybindings</a></th><td>Creates and sorts all the keybinding datums</td></tr>
+            <tr><th><a href="global.html#proc/is_abstract">is_abstract</a></th><td>Returns whether a type is an abstract type.</td></tr>
+            <tr><th><a href="global.html#proc/is_blind">is_blind</a></th><td>Checks if passed through item is blind</td></tr>
+            <tr><th><a href="global.html#proc/is_special_character">is_special_character</a></th><td>Is this mob special to the gamemode?</td></tr>
+            <tr><th><a href="global.html#proc/item_heal_robotic">item_heal_robotic</a></th><td>Heal a robotic body part on a mob</td></tr>
+            <tr><th><a href="global.html#proc/json_deserialize_datum">json_deserialize_datum</a></th><td>Convert a list of json to datum</td></tr>
+            <tr><th><a href="global.html#proc/json_serialize_datum">json_serialize_datum</a></th><td>Convert a datum into a json blob</td></tr>
+            <tr><th><a href="global.html#proc/load_map">load_map</a></th><td>Shortcut function to parse a map and apply it to the world.</td></tr>
+            <tr><th><a href="global.html#proc/load_poll_data">load_poll_data</a></th><td>Loads all current and future server polls and their options to store both as datums.</td></tr>
+            <tr><th><a href="global.html#proc/log_combat">log_combat</a></th><td>Log a combat message in the attack log</td></tr>
+            <tr><th><a href="global.html#proc/log_directed_talk">log_directed_talk</a></th><td>Helper for logging of messages with only one sender and receiver</td></tr>
+            <tr><th><a href="global.html#proc/make_datum_references_lists">make_datum_references_lists</a></th><td>Initial Building</td></tr>
+            <tr><th><a href="global.html#proc/movespeed_data_null_check">movespeed_data_null_check</a></th><td>Checks if a move speed modifier is valid and not missing any data</td></tr>
+            <tr><th><a href="global.html#proc/ninjaspeak">ninjaspeak</a></th><td>Convert a message into leet non gaijin speak</td></tr>
+            <tr><th><a href="global.html#proc/notify_ghosts">notify_ghosts</a></th><td>Fancy notifications for ghosts</td></tr>
+            <tr><th><a href="global.html#proc/offer_control">offer_control</a></th><td>Offer control of the passed in mob to dead player</td></tr>
+            <tr><th><a href="global.html#proc/pacify_coffin">pacify_coffin</a></th><td>Proc that will search inside a given atom for any corpses, and send the associated ghost to the lobby if possible</td></tr>
+            <tr><th><a href="global.html#proc/pacify_corpse">pacify_corpse</a></th><td>Proc that sends the client associated with a given corpse to the lobby, if possible</td></tr>
+            <tr><th><a href="global.html#proc/process_teleport_locs">process_teleport_locs</a></th><td>Generate a list of turfs you can teleport to from the areas list</td></tr>
+            <tr><th><a href="global.html#proc/propagate_network">propagate_network</a></th><td>remove the old powernet and replace it with a new one throughout the network.</td></tr>
+            <tr><th><a href="global.html#proc/qdel">qdel</a></th><td>Should be treated as a replacement for the 'del' keyword.</td></tr>
+            <tr><th><a href="global.html#proc/ran_zone">ran_zone</a></th><td>Return the zone or randomly, another valid zone</td></tr>
+            <tr><th><a href="global.html#proc/recursive_organ_check">recursive_organ_check</a></th><td></td></tr>
+            <tr><th><a href="global.html#proc/reject_bad_text">reject_bad_text</a></th><td>Returns the text if properly formatted, or null else.</td></tr>
+            <tr><th><a href="global.html#proc/reset_cooldown">reset_cooldown</a></th><td>Proc used by stoppable timers to end a cooldown before the time has ran out.</td></tr>
+            <tr><th><a href="global.html#proc/sanitize">sanitize</a></th><td>Runs byond's html encoding sanitization proc, after replacing new-lines and tabs for the # character.</td></tr>
+            <tr><th><a href="global.html#proc/sanitize_name">sanitize_name</a></th><td>returns nothing with an alert instead of the message if it contains something in the ic filter, and sanitizes normally if the name is fine. It returns nothing so it backs out of the input the same way as if you had entered nothing.</td></tr>
+            <tr><th><a href="global.html#proc/send2adminchat">send2adminchat</a></th><td>Asynchronously sends a message to TGS admin chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/send2chat">send2chat</a></th><td>Asynchronously sends a message to TGS chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/shake_camera">shake_camera</a></th><td>Shake the camera of the person viewing the mob SO REAL!</td></tr>
+            <tr><th><a href="global.html#proc/should_embed_weapon">should_embed_weapon</a></th><td>Returns whether or not this wound should embed a weapon</td></tr>
+            <tr><th><a href="global.html#proc/slur">slur</a></th><td>Makes you speak like you're drunk</td></tr>
+            <tr><th><a href="global.html#proc/stars">stars</a></th><td>Convert random parts of a passed in message to stars</td></tr>
+            <tr><th><a href="global.html#proc/strip_html">strip_html</a></th><td>Runs STRIP_HTML_SIMPLE and sanitize.</td></tr>
+            <tr><th><a href="global.html#proc/stutter">stutter</a></th><td>Adds stuttering to the message passed in</td></tr>
+            <tr><th><a href="global.html#proc/timeleft">timeleft</a></th><td>Get the remaining deciseconds on a timer</td></tr>
+            <tr><th><a href="global.html#proc/voice_of_god">voice_of_god</a></th><td>VOICE OF GOD</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/Failsafe"><aside class="declaration">var </aside>Failsafe
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/controller/failsafe</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/failsafe.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;failsafe.dm 7"/></a></h3>
+        <p>Failsafe</p>
+<p>Pretty much pokes the MC to make sure it's still alive.</p><h3 id="var/Master"><aside class="declaration">var </aside>Master
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/controller/master</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/master.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;master.dm 12"/></a></h3>
+        <p>StonedMC</p>
+<p>Designed to properly split up a given tick among subsystems
+Note: if you read parts of this code and think &quot;why is it doing it that way&quot;
+Odds are, there is a reason</p><h2 id="proc">Proc Details</h2><h3 id="proc/Gibberish"><aside class="declaration">proc </aside>Gibberish<aside>(text, replace_characters, chance) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L227">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 227"/></a></aside>
+        </h3>
+        <p>Turn text into complete gibberish!</p>
+<p>text is the inputted message, replace_characters will cause original letters to be replaced and chance are the odds that a character gets modified.</p><h3 id="proc/IsAdminGhost"><aside class="declaration">proc </aside>IsAdminGhost<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L832">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 832"/></a></aside>
+        </h3>
+        <p>Is the passed in mob an admin ghost</p><h3 id="proc/___TraitAdd"><aside class="declaration">proc </aside>___TraitAdd<aside>(target, trait, source) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/unsorted.dm#L1413">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1413"/></a></aside>
+        </h3>
+        <p>DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.</p><h3 id="proc/___TraitRemove"><aside class="declaration">proc </aside>___TraitRemove<aside>(target, trait, source) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/unsorted.dm#L1427">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1427"/></a></aside>
+        </h3>
+        <p>DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.</p><h3 id="proc/above_neck"><aside class="declaration">proc </aside>above_neck<aside>(zone) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 62"/></a></aside>
+        </h3>
+        <p>Would this zone be above the neck</p><h3 id="proc/add_keybinding"><aside class="declaration">proc </aside>add_keybinding<aside>(/<a href="datum.html">datum</a>/keybinding/instance) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/_globalvars/lists/keybindings.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;lists&#x2F;keybindings.dm 11"/></a></aside>
+        </h3>
+        <p>Adds an instanced keybinding to the global tracker</p><h3 id="proc/addtimer"><aside class="declaration">proc </aside>addtimer<aside>(/<a href="datum.html">datum</a>/<a href="datum/callback.html">callback</a>/callback, wait, flags) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/timer.dm#L466">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 466"/></a></aside>
+        </h3>
+        <p>Create a new timer and insert it in the queue</p>
+<p>Arguments:</p>
+<ul>
+<li>callback the callback to call on timer finish</li>
+<li>wait deciseconds to run the timer for</li>
+<li>flags flags for this timer, see: code__DEFINES\subsystems.dm</li>
+</ul><h3 id="proc/adminscrub"><aside class="declaration">proc </aside>adminscrub<aside>(text, limit) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/text.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 40"/></a></aside>
+        </h3>
+        <p>Runs STRIP_HTML_SIMPLE and byond's sanitization proc.</p><h3 id="proc/apply_random_special_trait"><aside class="declaration">proc </aside>apply_random_special_trait<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/character, /<a href="client.html">client</a>/player) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/_globalvars/special_traits.dm#L90">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;special_traits.dm 90"/></a></aside>
+        </h3>
+        <p>Applies random special trait IF the client has specials enabled in prefs</p><h3 id="proc/autopunct_bare"><aside class="declaration">proc </aside>autopunct_bare<aside>(input_text) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_azurepeak/code/datums/autopunctuation.dm#L10">
+        <img src="git.png" width="16" height="16" title="modular_azurepeak&#x2F;code&#x2F;datums&#x2F;autopunctuation.dm 10"/></a></aside>
+        </h3>
+        <p>Ensures sentences end in appropriate punctuation (a period if none exist) and that all whitespace-bounded 'i' characters are capitalized.
+If the sentence ends in chat-flavored markdown for bolds, italics or underscores and does not have a preceding period, exclamation mark or other flavored sentence terminator, add a period.
+(e.g: 'Borgs are rogue' becomes 'Borgs are rogue.', '+BORGS ARE ROGUE+ becomes '+BORGS ARE ROGUE+.', '+Borgs are rogue~+' is untouched.)</p><h3 id="proc/build_coalesce_description"><aside class="declaration">proc </aside>build_coalesce_description<aside>(/list/descriptors, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/described, /list/slots, string) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_descriptors.dm#L102">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_descriptors.dm 102"/></a></aside>
+        </h3>
+        <p>Print the remaining ones in seperate lines</p><h3 id="proc/callback_select"><aside class="declaration">proc </aside>callback_select<aside>(/list/callbacks, /list/callback_args, savereturns, resolution) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/callback.dm#L202">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;callback.dm 202"/></a></aside>
+        </h3>
+        <p>Runs a list of callbacks asyncronously, returning only when all have finished</p>
+<p>Callbacks can be repeated, to call it multiple times</p>
+<p>Arguments:</p>
+<ul>
+<li>list/callbacks the list of callbacks to be called</li>
+<li>list/callback_args the list of lists of arguments to pass into each callback</li>
+<li>savereturns Optionally save and return the list of returned values from each of the callbacks</li>
+<li>resolution The number of byond ticks between each time you check if all callbacks are complete</li>
+</ul><h3 id="proc/check_zone"><aside class="declaration">proc </aside>check_zone<aside>(zone) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 11"/></a></aside>
+        </h3>
+        <p>Convert a PRECISE ZONE into the BODY_ZONE</p><h3 id="proc/color_key_source_list_from_carbon"><aside class="declaration">proc </aside>color_key_source_list_from_carbon<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/carbon) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L243">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 243"/></a></aside>
+        </h3>
+        <p>Read specific organ entries to deduce eye, hair and facial hair color</p><h3 id="proc/color_list_to_string"><aside class="declaration">proc </aside>color_list_to_string<aside>(/list/color_list) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/ratwood.dm#L61">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ratwood.dm 61"/></a></aside>
+        </h3>
+        <p>Turns a list such as (&quot;#FFFFFF&quot;, #00FFFF) into a color string of &quot;#FFFFFF#00FFFF&quot;</p><h3 id="proc/color_string_to_list"><aside class="declaration">proc </aside>color_string_to_list<aside>(color_string) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/ratwood.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ratwood.dm 52"/></a></aside>
+        </h3>
+        <p>Turns a color string such as &quot;#FFFFFF#00FFFF&quot; into a list of (&quot;#FFFFFF&quot;, #00FFFF)</p><h3 id="proc/completed_bounty_count"><aside class="declaration">proc </aside>completed_bounty_count<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/cargo/bounty.dm#L174">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;cargo&#x2F;bounty.dm 174"/></a></aside>
+        </h3>
+        <p>Subtype Gens</p>
+<p>Strict Type Gens</p>
+<p>Dynamic Gens</p>
+<p>Cutoff for Non-Low Priority Bounties</p>
+<p>Low Priority Gens</p><h3 id="proc/compose_bounty"><aside class="declaration">proc </aside>compose_bounty<aside>(/<a href="datum.html">datum</a>/<a href="datum/bounty.html">bounty</a>/new_bounty) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/roguetown/roguemachine/bounty.dm#L184">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;roguetown&#x2F;roguemachine&#x2F;bounty.dm 184"/></a></aside>
+        </h3>
+        <p>Composes a random bounty banner based on the given bounty info.
+@param new_bounty:  The bounty datum.</p><h3 id="proc/considered_exiled"><aside class="declaration">proc </aside>considered_exiled<aside>(/<a href="datum.html">datum</a>/<a href="datum/mind.html">mind</a>/M) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/game.dm#L355">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 355"/></a></aside>
+        </h3>
+        <p>Exiled check</p>
+<p>Checks if the current body of the mind has an exile implant and is currently in
+an away mission. Returns FALSE if any of those conditions aren't met.</p><h3 id="proc/cultslur"><aside class="declaration">proc </aside>cultslur<aside>(n) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L137">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 137"/></a></aside>
+        </h3>
+        <p>Makes you talk like you got cult stunned, which is slurring but with some dark messages</p><h3 id="proc/deltimer"><aside class="declaration">proc </aside>deltimer<aside>(id) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/timer.dm#L516">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 516"/></a></aside>
+        </h3>
+        <p>Delete a timer</p>
+<p>Arguments:</p>
+<ul>
+<li>id a timerid or a /datum/timedevent</li>
+</ul><h3 id="proc/derpspeech"><aside class="declaration">proc </aside>derpspeech<aside>(message, stuttering) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L205">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 205"/></a></aside>
+        </h3>
+        <p>Convert a message to derpy speak</p><h3 id="proc/end_cooldown"><aside class="declaration">proc </aside>end_cooldown<aside>(/<a href="datum.html">datum</a>/source, index) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/datum.dm#L234">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 234"/></a></aside>
+        </h3>
+        <p>Callback called by a timer to end an associative-list-indexed cooldown.</p>
+<p>Arguments:</p>
+<ul>
+<li>source - datum storing the cooldown</li>
+<li>index - string index storing the cooldown on the cooldowns associative list</li>
+</ul>
+<p>This sends a signal reporting the cooldown end.</p><h3 id="proc/find_record"><aside class="declaration">proc </aside>find_record<aside>(field, value, /list/L) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/_lists.dm#L387">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;_lists.dm 387"/></a></aside>
+        </h3>
+        <p>Returns datum/data/record</p><h3 id="proc/findname"><aside class="declaration">proc </aside>findname<aside>(msg) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L292">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 292"/></a></aside>
+        </h3>
+        <p>Find if the message has the real name of any user mob in the mob_list</p><h3 id="proc/getFlatIcon"><aside class="declaration">proc </aside>getFlatIcon<aside>(/image/appearance, defdir, deficon, defstate, defblend, start, no_anim) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/icons.dm#L715">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 715"/></a></aside>
+        </h3>
+        <p>Create a single <a href="https://www.byond.com/docs/ref/#/icon" title="/icon">/icon</a> from a given <a href="atom.html" title="/atom">/atom</a> or <a href="https://www.byond.com/docs/ref/#/image" title="/image">/image</a>.</p>
+<p>Very low-performance. Should usually only be used for HTML, where BYOND's
+appearance system (overlays/underlays, etc.) is not available.</p>
+<p>Only the first argument is required.</p><h3 id="proc/get_flat_existing_human_icon"><aside class="declaration">proc </aside>get_flat_existing_human_icon<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/existing_human, directions_to_output) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/icons.dm#L1085">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 1085"/></a></aside>
+        </h3>
+        <p>A simpler version of get_flat_human_icon() that uses an existing human as a base to create the icon.
+Does not feature caching yet, since I could not think of a good way to cache them without having a possibility
+of using the cached version when we don't want to, so only use this proc if you just need this flat icon
+generated once and handle the caching yourself if you need to access that icon multiple times, or
+refactor this proc to feature caching of icons.</p>
+<p>Arguments:</p>
+<ul>
+<li>existing_human - The human we want to get a flat icon out of.</li>
+<li>directions_to_output - The directions of the resulting flat icon, defaults to all cardinal directions.</li>
+</ul><h3 id="proc/get_icon_dimensions"><aside class="declaration">proc </aside>get_icon_dimensions<aside>(icon_path) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/icons.dm#L1248">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 1248"/></a></aside>
+        </h3>
+        <p>Returns a list containing the width and height of an icon file</p><h3 id="proc/getleftblocks"><aside class="declaration">proc </aside>getleftblocks<aside>(input, blocknumber, blocksize) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/dna.dm#L455">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;dna.dm 455"/></a></aside>
+        </h3>
+        <p>DNA HELPER-PROCS</p><h3 id="proc/goonchem_vortex"><aside class="declaration">proc </aside>goonchem_vortex<aside>(/<a href="turf.html">turf</a>/T, setting_type, range) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/reagents/chemistry/recipes.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;chemistry&#x2F;recipes.dm 56"/></a></aside>
+        </h3>
+        <p>Simulates a vortex that moves nearby movable atoms towards or away from the turf T. Range also determines the strength of the effect. High values cause nearby objects to be thrown.</p><h3 id="proc/grant_lit_torch"><aside class="declaration">proc </aside>grant_lit_torch<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/character) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L424">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 424"/></a></aside>
+        </h3>
+        <p>FOR SOME silly FUCKING REASON THIS REFUSED TO WORK WITHOUT A FUCKING TIMER IT JUST FUCKED SHIT UP</p><h3 id="proc/init_keybindings"><aside class="declaration">proc </aside>init_keybindings<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/_globalvars/lists/keybindings.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;lists&#x2F;keybindings.dm 2"/></a></aside>
+        </h3>
+        <p>Creates and sorts all the keybinding datums</p><h3 id="proc/is_abstract"><aside class="declaration">proc </aside>is_abstract<aside>(/<a href="datum.html">datum</a>/datum_type) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/datum.dm#L257">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 257"/></a></aside>
+        </h3>
+        <p>Returns whether a type is an abstract type.</p><h3 id="proc/is_blind"><aside class="declaration">proc </aside>is_blind<aside>(A) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L693">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 693"/></a></aside>
+        </h3>
+        <p>Checks if passed through item is blind</p><h3 id="proc/is_special_character"><aside class="declaration">proc </aside>is_special_character<aside>(/<a href="mob.html">mob</a>/M) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L713">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 713"/></a></aside>
+        </h3>
+        <p>Is this mob special to the gamemode?</p>
+<p>returns 1 for special characters and 2 for heroes of gamemode</p><h3 id="proc/item_heal_robotic"><aside class="declaration">proc </aside>item_heal_robotic<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/H, /<a href="mob.html">mob</a>/user, brute_heal, burn_heal) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L814">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 814"/></a></aside>
+        </h3>
+        <p>Heal a robotic body part on a mob</p><h3 id="proc/json_deserialize_datum"><aside class="declaration">proc </aside>json_deserialize_datum<aside>(/list/jsonlist, /list/options, target_type, strict_target_type) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/datum.dm#L194">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 194"/></a></aside>
+        </h3>
+        <p>Convert a list of json to datum</p><h3 id="proc/json_serialize_datum"><aside class="declaration">proc </aside>json_serialize_datum<aside>(/<a href="datum.html">datum</a>/D, /list/options) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/datum.dm#L185">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 185"/></a></aside>
+        </h3>
+        <p>Convert a datum into a json blob</p><h3 id="proc/load_map"><aside class="declaration">proc </aside>load_map<aside>(dmm_file, x_offset, y_offset, z_offset, cropMap, measureOnly, no_changeturf, x_lower, x_upper, y_lower, y_upper, placeOnTop) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mapping/reader.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mapping&#x2F;reader.dm 44"/></a></aside>
+        </h3>
+        <p>Shortcut function to parse a map and apply it to the world.</p>
+<ul>
+<li><code>dmm_file</code>: A .dmm file to load (Required).</li>
+<li><code>x_offset</code>, <code>y_offset</code>, <code>z_offset</code>: Positions representign where to load the map (Optional).</li>
+<li><code>cropMap</code>: When true, the map will be cropped to fit the existing world dimensions (Optional).</li>
+<li><code>measureOnly</code>: When true, no changes will be made to the world (Optional).</li>
+<li><code>no_changeturf</code>: When true, <a href="turf.html" title="/turf">turf/AfterChange</a> won't be called on loaded turfs</li>
+<li><code>x_lower</code>, <code>x_upper</code>, <code>y_lower</code>, <code>y_upper</code>: Coordinates (relative to the map) to crop to (Optional).</li>
+<li><code>placeOnTop</code>: Whether to use <a href="turf.html" title="/turf">turf/PlaceOnTop</a> rather than <a href="turf.html" title="/turf">turf/ChangeTurf</a> (Optional).</li>
+</ul><h3 id="proc/load_poll_data"><aside class="declaration">proc </aside>load_poll_data<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/admin/poll_management.dm#L696">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;poll_management.dm 696"/></a></aside>
+        </h3>
+        <p>Loads all current and future server polls and their options to store both as datums.</p><h3 id="proc/log_combat"><aside class="declaration">proc </aside>log_combat<aside>(/<a href="atom.html">atom</a>/user, /<a href="atom.html">atom</a>/target, what_done, /<a href="atom.html">atom</a>/object, addition, log_seen) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/atoms.dm#L1177">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 1177"/></a></aside>
+        </h3>
+        <p>Log a combat message in the attack log</p>
+<p>1 argument is the actor performing the action
+2 argument is the target of the action
+3 is a verb describing the action (e.g. punched, throwed, kicked, etc.)
+4 is a tool with which the action was made (usually an item)
+5 is any additional text, which will be appended to the rest of the log line</p><h3 id="proc/log_directed_talk"><aside class="declaration">proc </aside>log_directed_talk<aside>(/<a href="atom.html">atom</a>/source, /<a href="atom.html">atom</a>/target, message, message_type, tag) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/atoms.dm#L1159">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 1159"/></a></aside>
+        </h3>
+        <p>Helper for logging of messages with only one sender and receiver</p><h3 id="proc/make_datum_references_lists"><aside class="declaration">proc </aside>make_datum_references_lists<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/global_lists.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;global_lists.dm 5"/></a></aside>
+        </h3>
+        <p>Initial Building</p><h3 id="proc/movespeed_data_null_check"><aside class="declaration">proc </aside>movespeed_data_null_check<aside>(/list/data) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_movespeed.dm#L137">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movespeed.dm 137"/></a></aside>
+        </h3>
+        <p>Checks if a move speed modifier is valid and not missing any data</p><h3 id="proc/ninjaspeak"><aside class="declaration">proc </aside>ninjaspeak<aside>(n) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L248">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 248"/></a></aside>
+        </h3>
+        <p>Convert a message into leet non gaijin speak</p>
+<p>The difference with stutter is that this proc can stutter more than 1 letter</p>
+<p>The issue here is that anything that does not have a space is treated as one word (in many instances). For instance, &quot;LOOKING,&quot; is a word, including the comma.</p>
+<p>It's fairly easy to fix if dealing with single letters but not so much with compounds of letters./N</p><h3 id="proc/notify_ghosts"><aside class="declaration">proc </aside>notify_ghosts<aside>(message, ghost_sound, enter_link, /<a href="atom.html">atom</a>/source, /mutable_appearance/alert_overlay, action, flashwindow, ignore_mapload, ignore_key, header, notify_suiciders, notify_volume) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L779">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 779"/></a></aside>
+        </h3>
+        <p>Fancy notifications for ghosts</p>
+<p>The kitchen sink of notification procs</p>
+<p>Arguments:</p>
+<ul>
+<li>message</li>
+<li>ghost_sound sound to play</li>
+<li>enter_link Href link to enter the ghost role being notified for</li>
+<li>source The source of the notification</li>
+<li>alert_overlay The alert overlay to show in the alert message</li>
+<li>action What action to take upon the ghost interacting with the notification, defaults to NOTIFY_JUMP</li>
+<li>flashwindow Flash the byond client window</li>
+<li>ignore_key  Ignore keys if they're in the GLOB.poll_ignore list</li>
+<li>header The header of the notifiaction</li>
+<li>notify_suiciders If it should notify suiciders (who do not qualify for many ghost roles)</li>
+<li>notify_volume How loud the sound should be to spook the user</li>
+</ul><h3 id="proc/offer_control"><aside class="declaration">proc </aside>offer_control<aside>(/<a href="mob.html">mob</a>/M) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L850">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 850"/></a></aside>
+        </h3>
+        <p>Offer control of the passed in mob to dead player</p>
+<p>Automatic logging and uses pollCandidatesForMob, how convenient</p><h3 id="proc/pacify_coffin"><aside class="declaration">proc </aside>pacify_coffin<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/coffin, /<a href="mob.html">mob</a>/user, deep, give_pq) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/spirit/spirit.dm#L180">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;spirit&#x2F;spirit.dm 180"/></a></aside>
+        </h3>
+        <p>Proc that will search inside a given atom for any corpses, and send the associated ghost to the lobby if possible</p><h3 id="proc/pacify_corpse"><aside class="declaration">proc </aside>pacify_corpse<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/corpse, /<a href="mob.html">mob</a>/user, coin_pq) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/spirit/spirit.dm#L208">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;spirit&#x2F;spirit.dm 208"/></a></aside>
+        </h3>
+        <p>Proc that sends the client associated with a given corpse to the lobby, if possible</p><h3 id="proc/process_teleport_locs"><aside class="declaration">proc </aside>process_teleport_locs<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/area/areas.dm#L131">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;area&#x2F;areas.dm 131"/></a></aside>
+        </h3>
+        <p>Generate a list of turfs you can teleport to from the areas list</p>
+<p>Includes areas if they're not a shuttle or not not teleport or have no contents</p>
+<p>The chosen turf is the first item in the areas contents that is a station level</p>
+<p>The returned list of turfs is sorted by name</p><h3 id="proc/propagate_network"><aside class="declaration">proc </aside>propagate_network<aside>(/<a href="obj.html">obj</a>/structure/cable/C, /<a href="datum.html">datum</a>/<a href="datum/powernet.html">powernet</a>/PN, skip_assigned_powernets) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/power/power.dm#L225">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;power.dm 225"/></a></aside>
+        </h3>
+        <p>remove the old powernet and replace it with a new one throughout the network.</p><h3 id="proc/qdel"><aside class="declaration">proc </aside>qdel<aside>(/<a href="datum.html">datum</a>/D, force, ...) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/garbage.dm#L286">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;garbage.dm 286"/></a></aside>
+        </h3>
+        <p>Should be treated as a replacement for the 'del' keyword.</p>
+<p>Datums passed to this will be given a chance to clean up references to allow the GC to collect them.</p><h3 id="proc/ran_zone"><aside class="declaration">proc </aside>ran_zone<aside>(zone, probability) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 54"/></a></aside>
+        </h3>
+        <p>Return the zone or randomly, another valid zone</p>
+<p>probability controls the chance it chooses the passed in zone, or another random zone
+defaults to 80</p><h3 id="proc/recursive_organ_check"><aside class="declaration">proc </aside>recursive_organ_check<aside>(/<a href="atom.html">atom</a>/O) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/game.dm#L169">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 169"/></a></aside>
+        </h3>
+        <ul>
+<li>recursive_organ_check
+<ul>
+<li>inputs: O (object to start with)</li>
+<li>outputs:</li>
+<li>description: A pseudo-recursive loop based off of the recursive mob check, this check looks for any organs held</li>
+<li>
+<pre><code>		 within 'O', toggling their frozen flag. This check excludes items held within other safe organ
+</code></pre>
+</li>
+<li>
+<pre><code>		 storage units, so that only the lowest level of container dictates whether we do or don't decompose
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="proc/reject_bad_text"><aside class="declaration">proc </aside>reject_bad_text<aside>(text, max_length, ascii_only) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/text.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 53"/></a></aside>
+        </h3>
+        <p>Returns the text if properly formatted, or null else.</p>
+<p>Things considered improper:</p>
+<ul>
+<li>Larger than max_length.</li>
+<li>Presence of non-ASCII characters if asci_only is set to TRUE.</li>
+<li>Only whitespaces, tabs and/or line breaks in the text.</li>
+<li>Presence of the &lt;, &gt;, \ and / characters.</li>
+<li>Presence of ASCII special control characters (horizontal tab and new line not included).</li>
+</ul><h3 id="proc/reset_cooldown"><aside class="declaration">proc </aside>reset_cooldown<aside>(/<a href="datum.html">datum</a>/source, index) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/datum.dm#L250">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 250"/></a></aside>
+        </h3>
+        <p>Proc used by stoppable timers to end a cooldown before the time has ran out.</p>
+<p>Arguments:</p>
+<ul>
+<li>source - datum storing the cooldown</li>
+<li>index - string index storing the cooldown on the cooldowns associative list</li>
+</ul>
+<p>This sends a signal reporting the cooldown end, passing the time left as an argument.</p><h3 id="proc/sanitize"><aside class="declaration">proc </aside>sanitize<aside>(text) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/text.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 29"/></a></aside>
+        </h3>
+        <p>Runs byond's html encoding sanitization proc, after replacing new-lines and tabs for the # character.</p><h3 id="proc/sanitize_name"><aside class="declaration">proc </aside>sanitize_name<aside>(t, /list/repl_chars) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/text.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 19"/></a></aside>
+        </h3>
+        <p>returns nothing with an alert instead of the message if it contains something in the ic filter, and sanitizes normally if the name is fine. It returns nothing so it backs out of the input the same way as if you had entered nothing.</p><h3 id="proc/send2adminchat"><aside class="declaration">proc </aside>send2adminchat<aside>(category, message, embed_links) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/chat.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 73"/></a></aside>
+        </h3>
+        <p>Asynchronously sends a message to TGS admin chat channels.</p>
+<p>category - The category of the mssage.
+message - The message to send.</p><h3 id="proc/send2chat"><aside class="declaration">proc </aside>send2chat<aside>(/<a href="datum.html">datum</a>/<a href="datum/tgs_message_content.html">tgs_message_content</a>/message, channel_tag, admin_only) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/chat.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 47"/></a></aside>
+        </h3>
+        <p>Asynchronously sends a message to TGS chat channels.</p>
+<p>message - The <a href="datum/tgs_message_content.html" title="/datum/tgs_message_content">/datum/tgs_message_content</a> to send.
+channel_tag - Required. If &quot;&quot;, the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).
+admin_only - Determines if this communication can only be sent to admin only channels.</p><h3 id="proc/shake_camera"><aside class="declaration">proc </aside>shake_camera<aside>(/<a href="mob.html">mob</a>/M, duration, strength) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L272">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 272"/></a></aside>
+        </h3>
+        <p>Shake the camera of the person viewing the mob SO REAL!</p><h3 id="proc/should_embed_weapon"><aside class="declaration">proc </aside>should_embed_weapon<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/wound_or_boolean, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/weapon) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L349">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 349"/></a></aside>
+        </h3>
+        <p>Returns whether or not this wound should embed a weapon</p><h3 id="proc/slur"><aside class="declaration">proc </aside>slur<aside>(n) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L100">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 100"/></a></aside>
+        </h3>
+        <p>Makes you speak like you're drunk</p><h3 id="proc/stars"><aside class="declaration">proc </aside>stars<aside>(n, pr) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 76"/></a></aside>
+        </h3>
+        <p>Convert random parts of a passed in message to stars</p>
+<ul>
+<li>n - the string to convert</li>
+<li>pr - probability any character gets changed</li>
+</ul>
+<p>This proc is dangerously laggy, avoid it or die</p><h3 id="proc/strip_html"><aside class="declaration">proc </aside>strip_html<aside>(text, limit) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/__HELPERS/text.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 35"/></a></aside>
+        </h3>
+        <p>Runs STRIP_HTML_SIMPLE and sanitize.</p><h3 id="proc/stutter"><aside class="declaration">proc </aside>stutter<aside>(n) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob_helpers.dm#L181">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 181"/></a></aside>
+        </h3>
+        <p>Adds stuttering to the message passed in</p><h3 id="proc/timeleft"><aside class="declaration">proc </aside>timeleft<aside>(id) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/timer.dm#L538">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 538"/></a></aside>
+        </h3>
+        <p>Get the remaining deciseconds on a timer</p>
+<p>Arguments:</p>
+<ul>
+<li>id a timerid or a /datum/timedevent</li>
+</ul><h3 id="proc/voice_of_god"><aside class="declaration">proc </aside>voice_of_god<aside>(message, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, /list/span_list, base_multiplier, include_speaker, message_admins) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/vocal_cords.dm#L124">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;vocal_cords.dm 124"/></a></aside>
+        </h3>
+        <p>VOICE OF GOD</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

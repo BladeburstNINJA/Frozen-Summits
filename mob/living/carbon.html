@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;carbon - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/carbon.html#var">Var Details</a> - <a href="mob/living/carbon.html#proc">Proc Details</a></header>
+<main>
+<h1>carbon <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon.dm#L559">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon.dm 559"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/dreaming">dreaming</a></th><td>How many dream images we have left to send</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/drunkenness">drunkenness</a></th><td>Overall drunkenness - check handle_alcohol() in life.dm for effects</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/ears">ears</a></th><td>only used by humans.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/failed_last_breath">failed_last_breath</a></th><td>This is used to determine if the mob failed a breath. If they did fail a brath, they will attempt to breathe each tick, otherwise just once per 4 ticks.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/glasses">glasses</a></th><td>only used by humans.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/gloves">gloves</a></th><td>only used by humans</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/handcuffed">handcuffed</a></th><td>Whether or not the mob is handcuffed</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/internal_organs">internal_organs</a></th><td>List of /obj/item/organ in the mob. They don't go in the contents for some reason I don't want to know.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/internal_organs_slot">internal_organs_slot</a></th><td>Same as above, but stores &quot;slot ID&quot; - &quot;organ&quot; pairs for easy access.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/last_mind">last_mind</a></th><td>last mind to control this mob, for blood-based cloning</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/legcuffed">legcuffed</a></th><td>Same as handcuffs but for legs. Bear traps use this.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/shoes">shoes</a></th><td>only used by humans.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/silent">silent</a></th><td>Can't talk. Value goes down every life proc. //NOTE TO FUTURE CODERS: DO NOT INITIALIZE NUMERICAL VARS AS NULL OR I WILL MURDER YOU.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/stam_paralyzed">stam_paralyzed</a></th><td>knocks you down</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/stam_regen_start_time">stam_regen_start_time</a></th><td>used to halt stamina regen temporarily</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/tinttotal">tinttotal</a></th><td>Total level of visualy impairing items</td></tr>
+            <tr><th><a href="mob/living/carbon.html#var/vitae_pool">vitae_pool</a></th><td>Amount of remaining vitae that can be drained from this mob</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/adjustOrganLoss">adjustOrganLoss</a></th><td></td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/check_virus">check_virus</a></th><td>Medical HUD! Basic mode needs suit sensors on.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/electrocute_act">electrocute_act</a></th><td>Adds to the parent by also adding functionality to propagate shocks through pulling and doing some fluff effects.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/getOrganLoss">getOrganLoss</a></th><td></td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/get_blood_dna_list">get_blood_dna_list</a></th><td>Get the mobs dna list</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/get_traumas">get_traumas</a></th><td>TRAUMAS</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/handle_liver">handle_liver</a></th><td>Decides if the liver is failing or not.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/humanize">humanize</a></th><td>Humanize</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/immortality">immortality</a></th><td>For the Wishgranter</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/reset_lightning">reset_lightning</a></th><td>SSweather.uniqueadd(T, TRUE)</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/roll_streak_freakout">roll_streak_freakout</a></th><td>Update grain alpha
+Update screen black/white</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/secondary_shock">secondary_shock</a></th><td>Called slightly after electrocute act to reduce jittering and apply a secondary stun.</td></tr>
+            <tr><th><a href="mob/living/carbon.html#proc/setOrganLoss">setOrganLoss</a></th><td></td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/dreaming"><aside class="declaration">var </aside>dreaming
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 16"/></a></h3>
+        <p>How many dream images we have left to send</p><h3 id="var/drunkenness"><aside class="declaration">var </aside>drunkenness
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L84">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 84"/></a></h3>
+        <p>Overall drunkenness - check handle_alcohol() in life.dm for effects</p><h3 id="var/ears"><aside class="declaration">var </aside>ears
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 43"/></a></h3>
+        <p>only used by humans.</p><h3 id="var/failed_last_breath"><aside class="declaration">var </aside>failed_last_breath
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 53"/></a></h3>
+        <p>This is used to determine if the mob failed a breath. If they did fail a brath, they will attempt to breathe each tick, otherwise just once per 4 ticks.</p><h3 id="var/glasses"><aside class="declaration">var </aside>glasses
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a>/glasses</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 41"/></a></h3>
+        <p>only used by humans.</p><h3 id="var/gloves"><aside class="declaration">var </aside>gloves
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 37"/></a></h3>
+        <p>only used by humans</p><h3 id="var/handcuffed"><aside class="declaration">var </aside>handcuffed
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 19"/></a></h3>
+        <p>Whether or not the mob is handcuffed</p><h3 id="var/internal_organs"><aside class="declaration">var </aside>internal_organs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 10"/></a></h3>
+        <p>List of /obj/item/organ in the mob. They don't go in the contents for some reason I don't want to know.</p><h3 id="var/internal_organs_slot"><aside class="declaration">var </aside>internal_organs_slot
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 12"/></a></h3>
+        <p>Same as above, but stores &quot;slot ID&quot; - &quot;organ&quot; pairs for easy access.</p><h3 id="var/last_mind"><aside class="declaration">var </aside>last_mind
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/mind.html">mind</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 50"/></a></h3>
+        <p>last mind to control this mob, for blood-based cloning</p><h3 id="var/legcuffed"><aside class="declaration">var </aside>legcuffed
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 21"/></a></h3>
+        <p>Same as handcuffs but for legs. Bear traps use this.</p><h3 id="var/shoes"><aside class="declaration">var </aside>shoes
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 39"/></a></h3>
+        <p>only used by humans.</p><h3 id="var/silent"><aside class="declaration">var </aside>silent
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 14"/></a></h3>
+        <p>Can't talk. Value goes down every life proc. //NOTE TO FUTURE CODERS: DO NOT INITIALIZE NUMERICAL VARS AS NULL OR I WILL MURDER YOU.</p><h3 id="var/stam_paralyzed"><aside class="declaration">var </aside>stam_paralyzed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L88">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 88"/></a></h3>
+        <p>knocks you down</p><h3 id="var/stam_regen_start_time"><aside class="declaration">var </aside>stam_regen_start_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L86">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 86"/></a></h3>
+        <p>used to halt stamina regen temporarily</p><h3 id="var/tinttotal"><aside class="declaration">var </aside>tinttotal
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L64">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 64"/></a></h3>
+        <p>Total level of visualy impairing items</p><h3 id="var/vitae_pool"><aside class="declaration">var </aside>vitae_pool
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defines.dm#L93">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defines.dm 93"/></a></h3>
+        <p>Amount of remaining vitae that can be drained from this mob</p><h2 id="proc">Proc Details</h2><h3 id="proc/adjustOrganLoss">adjustOrganLoss<aside>(slot, amount, maximum) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/damage_procs.dm#L133">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;damage_procs.dm 133"/></a></aside>
+        </h3>
+        <ul>
+<li>adjustOrganLoss
+<ul>
+<li>inputs: slot (organ slot, like ORGAN_SLOT_HEART), amount (damage to be done), and maximum (currently an arbitrarily large number, can be set so as to limit damage)</li>
+<li>outputs:</li>
+<li>description: If an organ exists in the slot requested, and we are capable of taking damage (we don't have GODMODE on), call the damage proc on that organ.</li>
+</ul>
+</li>
+</ul><h3 id="proc/check_virus"><aside class="declaration">proc </aside>check_virus<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/data_huds.dm#L92">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;data_huds.dm 92"/></a></aside>
+        </h3>
+        <p>Medical HUD! Basic mode needs suit sensors on.</p><h3 id="proc/electrocute_act"><aside class="parent"><a title="/mob/living" href="mob/living.html#proc/electrocute_act">&uarr;</a></aside>electrocute_act<aside>(shock_damage, source, siemens_coeff, flags) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defense.dm#L373">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defense.dm 373"/></a></aside>
+        </h3>
+        <p>Adds to the parent by also adding functionality to propagate shocks through pulling and doing some fluff effects.</p><h3 id="proc/getOrganLoss">getOrganLoss<aside>(slot) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/damage_procs.dm#L154">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;damage_procs.dm 154"/></a></aside>
+        </h3>
+        <ul>
+<li>getOrganLoss
+<ul>
+<li>inputs: slot (organ slot, like ORGAN_SLOT_HEART)</li>
+<li>outputs: organ damage</li>
+<li>description: If an organ exists in the slot requested, return the amount of damage that organ has</li>
+</ul>
+</li>
+</ul><h3 id="proc/get_blood_dna_list"><aside class="parent"><a title="/mob/living" href="mob/living.html#proc/get_blood_dna_list">&uarr;</a></aside>get_blood_dna_list<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/atoms.dm#L625">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 625"/></a></aside>
+        </h3>
+        <p>Get the mobs dna list</p><h3 id="proc/get_traumas"><aside class="declaration">proc </aside>get_traumas<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/status_procs.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;status_procs.dm 50"/></a></aside>
+        </h3>
+        <p>TRAUMAS</p><h3 id="proc/handle_liver"><aside class="declaration">proc </aside>handle_liver<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/life.dm#L766">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;life.dm 766"/></a></aside>
+        </h3>
+        <p>Decides if the liver is failing or not.</p><h3 id="proc/humanize"><aside class="declaration">proc </aside>humanize<aside>(tr_flags) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/transform_procs.dm#L165">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;transform_procs.dm 165"/></a></aside>
+        </h3>
+        <p>Humanize</p><h3 id="proc/immortality"><aside class="declaration">proc </aside>immortality<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/awaymissions/mission_code/wildwest.dm#L153">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;awaymissions&#x2F;mission_code&#x2F;wildwest.dm 153"/></a></aside>
+        </h3>
+        <p>For the Wishgranter</p><h3 id="proc/reset_lightning"><aside class="declaration">proc </aside>reset_lightning<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/weather/weather_types/roguetown/rain.dm#L86">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;weather&#x2F;weather_types&#x2F;roguetown&#x2F;rain.dm 86"/></a></aside>
+        </h3>
+        <p>SSweather.uniqueadd(T, TRUE)</p><h3 id="proc/roll_streak_freakout"><aside class="declaration">proc </aside>roll_streak_freakout<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/stress.dm#L169">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;stress.dm 169"/></a></aside>
+        </h3>
+        <p>Update grain alpha
+Update screen black/white</p><h3 id="proc/secondary_shock"><aside class="declaration">proc </aside>secondary_shock<aside>(should_stun) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/carbon_defense.dm#L407">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;carbon_defense.dm 407"/></a></aside>
+        </h3>
+        <p>Called slightly after electrocute act to reduce jittering and apply a secondary stun.</p><h3 id="proc/setOrganLoss">setOrganLoss<aside>(slot, amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/damage_procs.dm#L144">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;damage_procs.dm 144"/></a></aside>
+        </h3>
+        <ul>
+<li>setOrganLoss
+<ul>
+<li>inputs: slot (organ slot, like ORGAN_SLOT_HEART), amount(damage to be set to)</li>
+<li>outputs:</li>
+<li>description: If an organ exists in the slot requested, and we are capable of taking damage (we don't have GODMODE on), call the set damage proc on that organ, which can</li>
+<li>
+<pre><code>		 set or clear the failing variable on that organ, making it either cease or start functions again, unlike adjustOrganLoss.
+</code></pre>
+</li>
+</ul>
+</li>
+</ul></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

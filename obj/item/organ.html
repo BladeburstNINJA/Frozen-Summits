@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;organ - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/organ.html#var">Var Details</a> - <a href="obj/item/organ.html#proc">Proc Details</a></header>
+<main>
+<h1>organ <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/organ.html">organ</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/organ.html#var/accessory_colors">accessory_colors</a></th><td>Color list string for complex overlay generation through sprite accessory.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/accessory_type">accessory_type</a></th><td>Instead of creating an overlay from above variables we can use a sprite accessory.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/bodypart_desc">bodypart_desc</a></th><td>Description when the organ is visible and examined while it's attached to a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/bodypart_emissive_blocker">bodypart_emissive_blocker</a></th><td>Whether the bodypart organ overlay is an emissive blocker</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/bodypart_icon">bodypart_icon</a></th><td>Icon of the organ when it's on a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/bodypart_icon_state">bodypart_icon_state</a></th><td>Icon state of the organ when it's on a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/bodypart_layer">bodypart_layer</a></th><td>Layer of the overlay this organs renders for being on limbs.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/healing_factor">healing_factor</a></th><td>Healing factor and decay factor function on % of maxhealth, and do not work by applying a static number per tick</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/organ_dna_type">organ_dna_type</a></th><td>Type of organ DNA that this organ will create.</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/prev_damage">prev_damage</a></th><td>Organ variables for determining what we alert the owner with when they pass/clear the damage thresholds</td></tr>
+            <tr><th><a href="obj/item/organ.html#var/visible_organ">visible_organ</a></th><td>Whether the organ is fully internal and should not be seen by bare eyes.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/applyOrganDamage">applyOrganDamage</a></th><td>Adjusts an organ's damage by the amount &quot;d&quot;, up to a maximum amount, which is by default max damage</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/bodypart_icon">bodypart_icon</a></th><td>Proc to customize the base icon of the organ.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/bodypart_overlays">bodypart_overlays</a></th><td>This proc can add overlays to the organ image that is to be attached to a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/check_damage_thresholds">check_damage_thresholds</a></th><td></td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/create_organ_dna">create_organ_dna</a></th><td>Creates, imprints and returns an organ DNA datum.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/examine">examine</a></th><td>Damage decrements by a percent of its maxhealth
+Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/get_bodypart_desc">get_bodypart_desc</a></th><td>Gets organ description for when its attached to a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/get_bodypart_overlay">get_bodypart_overlay</a></th><td>Gets the organ overlay.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/imprint_organ_dna">imprint_organ_dna</a></th><td>Imprints an organ DNA datum.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/is_visible">is_visible</a></th><td>Whether the organ is visible and should appear on a bodypart.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/is_visible_on_owner">is_visible_on_owner</a></th><td>It's an internal organ, always hidden.
+Doesn't have an owner so it couldn't be covered by anything.</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/setOrganDamage">setOrganDamage</a></th><td>SETS an organ's damage to the amount &quot;d&quot;, and in doing so clears or sets the failing flag, good for when you have an effect that should fix an organ if broken</td></tr>
+            <tr><th><a href="obj/item/organ.html#proc/set_accessory_type">set_accessory_type</a></th><td>Sets an accessory type and optionally colors too.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/accessory_colors"><aside class="declaration">var </aside>accessory_colors
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 43"/></a></h3>
+        <p>Color list string for complex overlay generation through sprite accessory.</p><h3 id="var/accessory_type"><aside class="declaration">var </aside>accessory_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 41"/></a></h3>
+        <p>Instead of creating an overlay from above variables we can use a sprite accessory.</p><h3 id="var/bodypart_desc"><aside class="declaration">var </aside>bodypart_desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 33"/></a></h3>
+        <p>Description when the organ is visible and examined while it's attached to a bodypart.</p><h3 id="var/bodypart_emissive_blocker"><aside class="declaration">var </aside>bodypart_emissive_blocker
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 45"/></a></h3>
+        <p>Whether the bodypart organ overlay is an emissive blocker</p><h3 id="var/bodypart_icon"><aside class="declaration">var </aside>bodypart_icon
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 35"/></a></h3>
+        <p>Icon of the organ when it's on a bodypart.</p><h3 id="var/bodypart_icon_state"><aside class="declaration">var </aside>bodypart_icon_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 37"/></a></h3>
+        <p>Icon state of the organ when it's on a bodypart.</p><h3 id="var/bodypart_layer"><aside class="declaration">var </aside>bodypart_layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 39"/></a></h3>
+        <p>Layer of the overlay this organs renders for being on limbs.</p><h3 id="var/healing_factor"><aside class="declaration">var </aside>healing_factor
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 15"/></a></h3>
+        <p>Healing factor and decay factor function on % of maxhealth, and do not work by applying a static number per tick</p><h3 id="var/organ_dna_type"><aside class="declaration">var </aside>organ_dna_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 47"/></a></h3>
+        <p>Type of organ DNA that this organ will create.</p><h3 id="var/prev_damage"><aside class="declaration">var </aside>prev_damage
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 21"/></a></h3>
+        <p>Organ variables for determining what we alert the owner with when they pass/clear the damage thresholds</p><h3 id="var/visible_organ"><aside class="declaration">var </aside>visible_organ
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 31"/></a></h3>
+        <p>Whether the organ is fully internal and should not be seen by bare eyes.</p><h2 id="proc">Proc Details</h2><h3 id="proc/applyOrganDamage"><aside class="declaration">proc </aside>applyOrganDamage<aside>(d, maximum) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L176">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 176"/></a></aside>
+        </h3>
+        <p>Adjusts an organ's damage by the amount &quot;d&quot;, up to a maximum amount, which is by default max damage</p><h3 id="proc/bodypart_icon"><aside class="declaration">proc </aside>bodypart_icon<aside>(/mutable_appearance/standing) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L267">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 267"/></a></aside>
+        </h3>
+        <p>Proc to customize the base icon of the organ.</p><h3 id="proc/bodypart_overlays"><aside class="declaration">proc </aside>bodypart_overlays<aside>(/mutable_appearance/standing) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L271">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 271"/></a></aside>
+        </h3>
+        <p>This proc can add overlays to the organ image that is to be attached to a bodypart.</p><h3 id="proc/check_damage_thresholds"><aside class="declaration">proc </aside>check_damage_thresholds<aside>(/<a href="mob.html">mob</a>/M) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L197">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 197"/></a></aside>
+        </h3>
+        <ul>
+<li>check_damage_thresholds
+<ul>
+<li>input: M (a mob, the owner of the organ we call the proc on)</li>
+<li>output: returns a message should get displayed.</li>
+<li>description: By checking our current damage against our previous damage, we can decide whether we've passed an organ threshold.</li>
+<li>
+<pre><code>		 If we have, send the corresponding threshold message to the owner, if such a message exists.
+</code></pre>
+</li>
+</ul>
+</li>
+</ul><h3 id="proc/create_organ_dna"><aside class="declaration">proc </aside>create_organ_dna<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L299">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 299"/></a></aside>
+        </h3>
+        <p>Creates, imprints and returns an organ DNA datum.</p><h3 id="proc/examine"><aside class="parent"><a title="/atom" href="atom.html#proc/examine">&uarr;</a></aside>examine<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L116">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 116"/></a></aside>
+        </h3>
+        <p>Damage decrements by a percent of its maxhealth
+Damage decrements again by a percent of its maxhealth, up to a total of 4 extra times depending on the owner's health</p><h3 id="proc/get_bodypart_desc"><aside class="declaration">proc </aside>get_bodypart_desc<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L221">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 221"/></a></aside>
+        </h3>
+        <p>Gets organ description for when its attached to a bodypart.</p><h3 id="proc/get_bodypart_overlay"><aside class="declaration">proc </aside>get_bodypart_overlay<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/bodypart) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L240">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 240"/></a></aside>
+        </h3>
+        <p>Gets the organ overlay.</p><h3 id="proc/imprint_organ_dna"><aside class="declaration">proc </aside>imprint_organ_dna<aside>(/<a href="datum.html">datum</a>/<a href="datum/organ_dna.html">organ_dna</a>/organ_dna) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L305">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 305"/></a></aside>
+        </h3>
+        <p>Imprints an organ DNA datum.</p><h3 id="proc/is_visible"><aside class="declaration">proc </aside>is_visible<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L225">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 225"/></a></aside>
+        </h3>
+        <p>Whether the organ is visible and should appear on a bodypart.</p><h3 id="proc/is_visible_on_owner"><aside class="declaration">proc </aside>is_visible_on_owner<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L236">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 236"/></a></aside>
+        </h3>
+        <p>It's an internal organ, always hidden.
+Doesn't have an owner so it couldn't be covered by anything.</p><h3 id="proc/setOrganDamage"><aside class="declaration">proc </aside>setOrganDamage<aside>(d) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L188">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 188"/></a></aside>
+        </h3>
+        <p>SETS an organ's damage to the amount &quot;d&quot;, and in doing so clears or sets the failing flag, good for when you have an effect that should fix an organ if broken</p><h3 id="proc/set_accessory_type"><aside class="declaration">proc </aside>set_accessory_type<aside>(new_accessory_type, colors) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/organs/organ_internal.dm#L278">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;organs&#x2F;organ_internal.dm 278"/></a></aside>
+        </h3>
+        <p>Sets an accessory type and optionally colors too.</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

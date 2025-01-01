@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;effect&#x2F;track - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/effect/track.html#var">Var Details</a> - <a href="obj/effect/track.html#proc">Proc Details</a></header>
+<main>
+<h1>track <aside>/<a href="obj.html">obj</a>/<a href="obj/effect/track.html">effect/track</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L35">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 35"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/effect/track.html#var/ambiguous_track_type">ambiguous_track_type</a></th><td>Like above, except what you get if you are not good.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/creation_time">creation_time</a></th><td>When this was created. Adjusts difficulty of locating / analyzing.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/creator">creator</a></th><td>The exact mob that created this. Only used to see if the spotter can notice their own tracks (fairly easy)</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/deletion_timer">deletion_timer</a></th><td>The timer handling deletion. Saved to potentially adjust it.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/depth">depth</a></th><td>If the depth of the tracks is abnormal, e.g. because of heavy armor.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/facing">facing</a></th><td>The way the mob was facing when this was created. Obviously can be messed with if you e.g. walk backwards.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/known_by">known_by</a></th><td>List of mobs aware of this track.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/overwrites">overwrites</a></th><td>Tracks how many tracks have been chain-overwritten before this track. Could indicate a commonly passed area.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/real_icon_state">real_icon_state</a></th><td>The visible state for those that know this.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/real_image">real_image</a></th><td>The image knowers see.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/special_movement">special_movement</a></th><td>If the creator was moving in a special way, e.g. running / sneaking. Difficult to discern.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/track_type">track_type</a></th><td>What kind of foot, or footwear, created this.</td></tr>
+            <tr><th><a href="obj/effect/track.html#var/tracking_modifier">tracking_modifier</a></th><td>Some things may be easier or harder to track. This adjusts the base difficulty accordingly.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/add_knower">add_knower</a></th><td>Adds a new person to the list of people who can see this track.</td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/check_reveal">check_reveal</a></th><td>Handles checks for if a mob can reveal this. Also returns FALSE if already known to mob.</td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/clear_creator_reference">clear_creator_reference</a></th><td>Clears the reference to the creator. Is replaced by the above proc if the creator analyzes it.</td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/handle_revealing">handle_revealing</a></th><td>Handles revealing the track, including checking how well the tracker can analyze it.</td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/remove_knower">remove_knower</a></th><td>Removes a knower from the known ones. Usually only done when qdeleted.</td></tr>
+            <tr><th><a href="obj/effect/track.html#proc/track_expire">track_expire</a></th><td>Called when the track's time expires, at which point it becomes indistinguishable (aka, deleted)</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/ambiguous_track_type"><aside class="declaration">var </aside>ambiguous_track_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L53">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 53"/></a></h3>
+        <p>Like above, except what you get if you are not good.</p><h3 id="var/creation_time"><aside class="declaration">var </aside>creation_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L49">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 49"/></a></h3>
+        <p>When this was created. Adjusts difficulty of locating / analyzing.</p><h3 id="var/creator"><aside class="declaration">var </aside>creator
+            <aside>&ndash; /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L61">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 61"/></a></h3>
+        <p>The exact mob that created this. Only used to see if the spotter can notice their own tracks (fairly easy)</p><h3 id="var/deletion_timer"><aside class="declaration">var </aside>deletion_timer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L69">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 69"/></a></h3>
+        <p>The timer handling deletion. Saved to potentially adjust it.</p><h3 id="var/depth"><aside class="declaration">var </aside>depth
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L57">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 57"/></a></h3>
+        <p>If the depth of the tracks is abnormal, e.g. because of heavy armor.</p><h3 id="var/facing"><aside class="declaration">var </aside>facing
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L55">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 55"/></a></h3>
+        <p>The way the mob was facing when this was created. Obviously can be messed with if you e.g. walk backwards.</p><h3 id="var/known_by"><aside class="declaration">var </aside>known_by
+            <aside>&ndash; /list/mob/living</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L47">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 47"/></a></h3>
+        <p>List of mobs aware of this track.</p><h3 id="var/overwrites"><aside class="declaration">var </aside>overwrites
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L65">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 65"/></a></h3>
+        <p>Tracks how many tracks have been chain-overwritten before this track. Could indicate a commonly passed area.</p><h3 id="var/real_icon_state"><aside class="declaration">var </aside>real_icon_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L43">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 43"/></a></h3>
+        <p>The visible state for those that know this.</p><h3 id="var/real_image"><aside class="declaration">var </aside>real_image
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L45">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 45"/></a></h3>
+        <p>The image knowers see.</p><h3 id="var/special_movement"><aside class="declaration">var </aside>special_movement
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L59">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 59"/></a></h3>
+        <p>If the creator was moving in a special way, e.g. running / sneaking. Difficult to discern.</p><h3 id="var/track_type"><aside class="declaration">var </aside>track_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L51">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 51"/></a></h3>
+        <p>What kind of foot, or footwear, created this.</p><h3 id="var/tracking_modifier"><aside class="declaration">var </aside>tracking_modifier
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L63">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 63"/></a></h3>
+        <p>Some things may be easier or harder to track. This adjusts the base difficulty accordingly.</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_knower"><aside class="declaration">proc </aside>add_knower<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/tracker, competence) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L179">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 179"/></a></aside>
+        </h3>
+        <p>Adds a new person to the list of people who can see this track.</p><h3 id="proc/check_reveal"><aside class="declaration">proc </aside>check_reveal<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L98">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 98"/></a></aside>
+        </h3>
+        <p>Handles checks for if a mob can reveal this. Also returns FALSE if already known to mob.</p><h3 id="proc/clear_creator_reference"><aside class="declaration">proc </aside>clear_creator_reference<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/creator_arg) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L196">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 196"/></a></aside>
+        </h3>
+        <p>Clears the reference to the creator. Is replaced by the above proc if the creator analyzes it.</p><h3 id="proc/handle_revealing"><aside class="declaration">proc </aside>handle_revealing<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L123">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 123"/></a></aside>
+        </h3>
+        <p>Handles revealing the track, including checking how well the tracker can analyze it.</p><h3 id="proc/remove_knower"><aside class="declaration">proc </aside>remove_knower<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/tracker) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L186">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 186"/></a></aside>
+        </h3>
+        <p>Removes a knower from the known ones. Usually only done when qdeleted.</p><h3 id="proc/track_expire"><aside class="declaration">proc </aside>track_expire<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L202">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 202"/></a></aside>
+        </h3>
+        <p>Called when the track's time expires, at which point it becomes indistinguishable (aka, deleted)</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

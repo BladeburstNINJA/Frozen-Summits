@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;migrants - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/controller/subsystem/migrants.html#proc">Proc Details</a></header>
+<main>
+<h1>migrants <aside>/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/migrants.html">migrants</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/controller/subsystem/migrants.html#proc/get_active_migrants">get_active_migrants</a></th><td>Returns a list of all newplayer clients with active migrant pref</td></tr>
+            <tr><th><a href="datum/controller/subsystem/migrants.html#proc/get_all_migrants">get_all_migrants</a></th><td>Returns a list of all newplayer clients</td></tr>
+            <tr><th><a href="datum/controller/subsystem/migrants.html#proc/get_priority_players">get_priority_players</a></th><td>copy pasta from AttemptLateSpawn(rank) further on TODO put it in a proc and use in both places
+Fade effect
+And back to non copy pasta code</td></tr>
+            <tr><th><a href="datum/controller/subsystem/migrants.html#proc/get_status_line">get_status_line</a></th><td>Create initial assignment list
+Populate it
+Shuffle assignments so role rolling is not consistent
+Try to assign priority players to positions
+Assign rest of the players to positions
+Find spawn points for the assignments
+See if anything went wrong and return FALSE if it did
+At this point everything is GOOD and SWELL, we want to spawn the wave
+Unset their pref so if they respawn they wont get yoinked into migrants immediately
+Spawn the migrants, hooray</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/get_active_migrants"><aside class="declaration">proc </aside>get_active_migrants<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L366">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 366"/></a></aside>
+        </h3>
+        <p>Returns a list of all newplayer clients with active migrant pref</p><h3 id="proc/get_all_migrants"><aside class="declaration">proc </aside>get_all_migrants<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L379">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 379"/></a></aside>
+        </h3>
+        <p>Returns a list of all newplayer clients</p><h3 id="proc/get_priority_players"><aside class="declaration">proc </aside>get_priority_players<aside>(/list/players, role_type) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L267">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 267"/></a></aside>
+        </h3>
+        <p>copy pasta from AttemptLateSpawn(rank) further on TODO put it in a proc and use in both places
+Fade effect
+And back to non copy pasta code</p><h3 id="proc/get_status_line"><aside class="declaration">proc </aside>get_status_line<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/controllers/subsystem/migrants.dm#L162">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;migrants.dm 162"/></a></aside>
+        </h3>
+        <p>Create initial assignment list
+Populate it
+Shuffle assignments so role rolling is not consistent
+Try to assign priority players to positions
+Assign rest of the players to positions
+Find spawn points for the assignments
+See if anything went wrong and return FALSE if it did
+At this point everything is GOOD and SWELL, we want to spawn the wave
+Unset their pref so if they respawn they wont get yoinked into migrants immediately
+Spawn the migrants, hooray</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

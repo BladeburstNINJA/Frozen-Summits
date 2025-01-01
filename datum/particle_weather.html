@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;particle_weather - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/particle_weather.html#var">Var Details</a> - <a href="datum/particle_weather.html#proc">Proc Details</a></header>
+<main>
+<h1>particle_weather <aside>/<a href="datum.html">datum</a>/<a href="datum/particle_weather.html">particle_weather</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 60"/></a></h1>
+
+<p>Shitty particle weather by Gomble
+Causes weather to occur on a z level in certain area types</p>
+<p>The effects of weather occur across an entire z-level. For instance, lavaland has periodic ash storms that scorch most unprotected creatures.
+Weather always occurs on different z levels at different times, regardless of weather type.
+Can have custom durations, targets, and can automatically protect indoor areas.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/barometer_predictable">barometer_predictable</a></th><td>Whether a barometer can predict when the weather will happen</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/desc">desc</a></th><td>description of weather</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/immunity_type">immunity_type</a></th><td>Used by mobs to prevent them from being affected by the weather</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/name">name</a></th><td>name of weather</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/next_hit_time">next_hit_time</a></th><td>For barometers to know when the next storm will hit</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/probability">probability</a></th><td>Weight amongst other eligible weather. If zero, will never happen randomly.</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/target_trait">target_trait</a></th><td>The map weather type to target</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/weather_duration">weather_duration</a></th><td>In deciseconds, how long the weather lasts once it begins</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/weather_duration_lower">weather_duration_lower</a></th><td>See above - this is the lowest possible duration</td></tr>
+            <tr><th><a href="datum/particle_weather.html#var/weather_duration_upper">weather_duration_upper</a></th><td>See above - this is the highest possible duration</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/can_weather">can_weather</a></th><td>Returns TRUE if the living mob can hear the weather (you might be immune, but you get to listen to the pitter patter)</td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/can_weather_effect">can_weather_effect</a></th><td>Returns TRUE if the living mob can be affected by the weather</td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/end">end</a></th><td>Fully ends the weather</td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/start">start</a></th><td>Starts the actual weather and effects from it</td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/try_weather_act">try_weather_act</a></th><td>Try to do weather effects - if we can hear sound, play it
+If we are affected by weather (i.e damage), do effect and send severity message</td></tr>
+            <tr><th><a href="datum/particle_weather.html#proc/wind_down">wind_down</a></th><td>Weather enters the winding down phase, stops effects</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/barometer_predictable"><aside class="declaration">var </aside>barometer_predictable
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L116">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 116"/></a></h3>
+        <p>Whether a barometer can predict when the weather will happen</p><h3 id="var/desc"><aside class="declaration">var </aside>desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 67"/></a></h3>
+        <p>description of weather</p><h3 id="var/immunity_type"><aside class="declaration">var </aside>immunity_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L98">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 98"/></a></h3>
+        <p>Used by mobs to prevent them from being affected by the weather</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 65"/></a></h3>
+        <p>name of weather</p><h3 id="var/next_hit_time"><aside class="declaration">var </aside>next_hit_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L118">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 118"/></a></h3>
+        <p>For barometers to know when the next storm will hit</p><h3 id="var/probability"><aside class="declaration">var </aside>probability
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L100">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 100"/></a></h3>
+        <p>Weight amongst other eligible weather. If zero, will never happen randomly.</p><h3 id="var/target_trait"><aside class="declaration">var </aside>target_trait
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L103">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 103"/></a></h3>
+        <p>The map weather type to target</p><h3 id="var/weather_duration"><aside class="declaration">var </aside>weather_duration
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L121">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 121"/></a></h3>
+        <p>In deciseconds, how long the weather lasts once it begins</p><h3 id="var/weather_duration_lower"><aside class="declaration">var </aside>weather_duration_lower
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L84">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 84"/></a></h3>
+        <p>See above - this is the lowest possible duration</p><h3 id="var/weather_duration_upper"><aside class="declaration">var </aside>weather_duration_upper
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L86">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 86"/></a></h3>
+        <p>See above - this is the highest possible duration</p><h2 id="proc">Proc Details</h2><h3 id="proc/can_weather"><aside class="declaration">proc </aside>can_weather<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/mob_to_check) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L225">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 225"/></a></aside>
+        </h3>
+        <p>Returns TRUE if the living mob can hear the weather (you might be immune, but you get to listen to the pitter patter)</p><h3 id="proc/can_weather_effect"><aside class="declaration">proc </aside>can_weather_effect<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/mob_to_check) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L239">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 239"/></a></aside>
+        </h3>
+        <p>Returns TRUE if the living mob can be affected by the weather</p><h3 id="proc/end"><aside class="declaration">proc </aside>end<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L217">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 217"/></a></aside>
+        </h3>
+        <p>Fully ends the weather</p>
+<p>Effects no longer occur and particles are wound down
+Removes weather from processing completely</p><h3 id="proc/start"><aside class="declaration">proc </aside>start<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L154">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 154"/></a></aside>
+        </h3>
+        <p>Starts the actual weather and effects from it</p>
+<p>Updates area overlays and sends sounds and messages to mobs to notify them
+Begins dealing effects from weather to mobs in the area</p><h3 id="proc/try_weather_act"><aside class="declaration">proc </aside>try_weather_act<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/L) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L255">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 255"/></a></aside>
+        </h3>
+        <p>Try to do weather effects - if we can hear sound, play it
+If we are affected by weather (i.e damage), do effect and send severity message</p><h3 id="proc/wind_down"><aside class="declaration">proc </aside>wind_down<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/particle_weathers/_base.dm#L200">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;particle_weathers&#x2F;_base.dm 200"/></a></aside>
+        </h3>
+        <p>Weather enters the winding down phase, stops effects</p>
+<p>Updates areas to be in the winding down phase
+Sends sounds and messages to mobs to notify them</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

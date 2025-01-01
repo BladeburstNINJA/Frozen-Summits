@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/carbon/human.html#var">Var Details</a> - <a href="mob/living/carbon/human.html#proc">Proc Details</a></header>
+<main>
+<h1>human <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/character_flaw/addiction.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;character_flaw&#x2F;addiction.dm 2"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#var/curses">curses</a></th><td>List of curses on this mob</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/adv_hugboxing_start">adv_hugboxing_start</a></th><td>FOR SOME silly FUCKING REASON THIS REFUSED TO WORK WITHOUT A FUCKING TIMER IT JUST FUCKED SHIT UP</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/can_equip">can_equip</a></th><td>HUDs</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/electrocute_act">electrocute_act</a></th><td>Calculates the siemens coeff based on clothing and species, can also restart hearts.</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/emp_act">emp_act</a></th><td>if(undergoing_cardiac_arrest() &amp;&amp; can_heartattack() &amp;&amp; !(flags &amp; SHOCK_ILLUSION))</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/handle_fire">handle_fire</a></th><td>FIRE CODE</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/sec_hud_set_ID">sec_hud_set_ID</a></th><td>Security HUDs! Basic mode shows only the job.</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/singularity_act">singularity_act</a></th><td>Overrides the point value that the mob is worth</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/something_horrible">something_horrible</a></th><td>DNA HELPER-PROCS</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/zombie_check">zombie_check</a></th><td>Use this to attempt to add the zombie antag datum to a human</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/zombie_infect_attempt">zombie_infect_attempt</a></th><td>This occurs when one zombie infects a living human, going into instadeath from here is kind of shit and confusing
+We instead just transform at the end</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/curses"><aside class="declaration">var </aside>curses
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/gods/patrons/curses.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gods&#x2F;patrons&#x2F;curses.dm 3"/></a></h3>
+        <p>List of curses on this mob</p><h2 id="proc">Proc Details</h2><h3 id="proc/adv_hugboxing_start"><aside class="declaration">proc </aside>adv_hugboxing_start<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/jobs/job_types/roguetown/adventurer/adventurer.dm#L46">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;jobs&#x2F;job_types&#x2F;roguetown&#x2F;adventurer&#x2F;adventurer.dm 46"/></a></aside>
+        </h3>
+        <p>FOR SOME silly FUCKING REASON THIS REFUSED TO WORK WITHOUT A FUCKING TIMER IT JUST FUCKED SHIT UP</p><h3 id="proc/can_equip">can_equip<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/I, slot, disable_warning, bypass_equip_delay_self) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/inventory.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;inventory.dm 1"/></a></aside>
+        </h3>
+        <p>HUDs</p><h3 id="proc/electrocute_act"><aside class="parent"><a title="/mob/living/carbon" href="mob/living/carbon.html#proc/electrocute_act">&uarr;</a></aside>electrocute_act<aside>(shock_damage, source, siemens_coeff, flags) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/human_defense.dm#L547">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defense.dm 547"/></a></aside>
+        </h3>
+        <p>Calculates the siemens coeff based on clothing and species, can also restart hearts.</p><h3 id="proc/emp_act"><aside class="parent"><a title="/atom" href="atom.html#proc/emp_act">&uarr;</a></aside>emp_act<aside>(severity) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/human_defense.dm#L576">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defense.dm 576"/></a></aside>
+        </h3>
+        <p>if(undergoing_cardiac_arrest() &amp;&amp; can_heartattack() &amp;&amp; !(flags &amp; SHOCK_ILLUSION))</p><h3 id="proc/handle_fire">handle_fire<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/life.dm#L184">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;life.dm 184"/></a></aside>
+        </h3>
+        <p>FIRE CODE</p><h3 id="proc/sec_hud_set_ID"><aside class="declaration">proc </aside>sec_hud_set_ID<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/data_huds.dm#L221">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;data_huds.dm 221"/></a></aside>
+        </h3>
+        <p>Security HUDs! Basic mode shows only the job.</p><h3 id="proc/singularity_act"><aside class="parent"><a title="/mob/living" href="mob/living.html#proc/singularity_act">&uarr;</a></aside>singularity_act<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/human_defense.dm#L736">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defense.dm 736"/></a></aside>
+        </h3>
+        <p>Overrides the point value that the mob is worth</p><h3 id="proc/something_horrible"><aside class="declaration">proc </aside>something_horrible<aside>(ignore_stability) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/dna.dm#L566">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;dna.dm 566"/></a></aside>
+        </h3>
+        <p>DNA HELPER-PROCS</p><h3 id="proc/zombie_check"><aside class="declaration">proc </aside>zombie_check<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/antagonists/roguetown/villain/zomble.dm#L286">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;antagonists&#x2F;roguetown&#x2F;villain&#x2F;zomble.dm 286"/></a></aside>
+        </h3>
+        <p>Use this to attempt to add the zombie antag datum to a human</p><h3 id="proc/zombie_infect_attempt"><aside class="declaration">proc </aside>zombie_infect_attempt<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/antagonists/roguetown/villain/zomble.dm#L306">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;antagonists&#x2F;roguetown&#x2F;villain&#x2F;zomble.dm 306"/></a></aside>
+        </h3>
+        <p>This occurs when one zombie infects a living human, going into instadeath from here is kind of shit and confusing
+We instead just transform at the end</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

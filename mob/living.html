@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living.html#var">Var Details</a> - <a href="mob/living.html#proc">Proc Details</a></header>
+<main>
+<h1>living <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/_onclick/item_attack.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;item_attack.dm 65"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living.html#var/rogue_sneaking">rogue_sneaking</a></th><td>*This variable updated in mob_movement.dm primarily. Mainly a shitcode measure for existing shitcode because this is SHITCODE!
+* All it does is track when a mob is sneaking so we don't have to constantly reset alpha values as this fucks with how things are intended to be.
+* if you really need to cancel someone who is sneaking, call update_sneak_invis(TRUE).</td></tr>
+            <tr><th><a href="mob/living.html#var/simple_embedded_objects">simple_embedded_objects</a></th><td>Simple embedded objects with no associated bodyparts</td></tr>
+            <tr><th><a href="mob/living.html#var/simple_wounds">simple_wounds</a></th><td>Simple wound instances with no associated bodyparts</td></tr>
+            <tr><th><a href="mob/living.html#var/voice_pitch">voice_pitch</a></th><td>Voice pitch for audible emotes</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living.html#proc/AllImmobility">AllImmobility</a></th><td>Blanket</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsFrozen">IsFrozen</a></th><td>FROZEN</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsImmobilized">IsImmobilized</a></th><td>IMMOBILIZED</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsKnockdown">IsKnockdown</a></th><td>KNOCKDOWN</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsOffBalanced">IsOffBalanced</a></th><td>OFF-BALANCED</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsParalyzed">IsParalyzed</a></th><td>PARALYZED</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsStun">IsStun</a></th><td>STUN</td></tr>
+            <tr><th><a href="mob/living.html#proc/IsUnconscious">IsUnconscious</a></th><td>UNCONSCIOUS</td></tr>
+            <tr><th><a href="mob/living.html#proc/Slowdown">Slowdown</a></th><td>Set the slowdown of a mob</td></tr>
+            <tr><th><a href="mob/living.html#proc/add_quirk">add_quirk</a></th><td>DISABILITIES</td></tr>
+            <tr><th><a href="mob/living.html#proc/add_stun_absorption">add_stun_absorption</a></th><td>STUN ABSORPTION</td></tr>
+            <tr><th><a href="mob/living.html#proc/can_look_up">can_look_up</a></th><td>Checks if the user is incapacitated or on cooldown.</td></tr>
+            <tr><th><a href="mob/living.html#proc/canface">canface</a></th><td>Checks mobility move as well as parent checks</td></tr>
+            <tr><th><a href="mob/living.html#proc/cure_blind">cure_blind</a></th><td>TRAIT PROCS</td></tr>
+            <tr><th><a href="mob/living.html#proc/electrocute_act">electrocute_act</a></th><td>As the name suggests, this should be called to apply electric shocks.</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_blood_dna_list">get_blood_dna_list</a></th><td>returns the mob's dna info as a list, to be inserted in an object's blood_DNA list</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_embedded_objects">get_embedded_objects</a></th><td>Returns every embedded object we have, simple or not</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_heretic_symbol">get_heretic_symbol</a></th><td>Same as get_heretic_text, but returns a simple symbol depending on the type of heretic!</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_heretic_text">get_heretic_text</a></th><td>Returns patron-related examine text for the mob, if any. Can return null.</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_sewable_wounds">get_sewable_wounds</a></th><td>Gets all sewable wounds in a mob</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_track_info">get_track_info</a></th><td>Gets special info for a track relative to a mob, such as type and depth. Override if desiring tracking modifier adjustment.</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_villain_text">get_villain_text</a></th><td>Returns antagonist-related examine text for the mob, if any. Can return null.</td></tr>
+            <tr><th><a href="mob/living.html#proc/get_wounds">get_wounds</a></th><td>Returns every wound we have, simple or not</td></tr>
+            <tr><th><a href="mob/living.html#proc/has_embedded_object">has_embedded_object</a></th><td>Checks if we have an embedded object of a specific type</td></tr>
+            <tr><th><a href="mob/living.html#proc/has_embedded_objects">has_embedded_objects</a></th><td>Checks if we have any embedded objects whatsoever</td></tr>
+            <tr><th><a href="mob/living.html#proc/has_wound">has_wound</a></th><td>Loops through our list of wounds and returns the first wound that is of the type specified by the path</td></tr>
+            <tr><th><a href="mob/living.html#proc/hasparasites">hasparasites</a></th><td>parasite tracking/finding procs</td></tr>
+            <tr><th><a href="mob/living.html#proc/heal_wounds">heal_wounds</a></th><td>Loops through our list of wounds healing them until we run out of healing or all wounds are healed</td></tr>
+            <tr><th><a href="mob/living.html#proc/hud_set_nanite_indicator">hud_set_nanite_indicator</a></th><td>Diagnostic HUDs!</td></tr>
+            <tr><th><a href="mob/living.html#proc/is_object_embedded">is_object_embedded</a></th><td>Checks if an object is embedded in us</td></tr>
+            <tr><th><a href="mob/living.html#proc/look_around">look_around</a></th><td>look_up Changes the perspective of the mob to any openspace turf above the mob</td></tr>
+            <tr><th><a href="mob/living.html#proc/shared_living_ui_distance">shared_living_ui_distance</a></th><td>public</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_add_embedded_object">simple_add_embedded_object</a></th><td>Simple version for adding an embedded object - DO NOT CALL THIS ON CARBON MOBS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_add_wound">simple_add_wound</a></th><td>Simple version for adding a wound - DO NOT CALL THIS ON CARBON MOBS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_remove_embedded_object">simple_remove_embedded_object</a></th><td>Simple version for removing an embedded object - DO NOT CALL THIS ON CARBON MOBS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_remove_wound">simple_remove_wound</a></th><td>Simple version for removing a wound - DO NOT CALL THIS ON CARBON MOBS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_try_crit">simple_try_crit</a></th><td>Tries to do a critical hit on a mob that uses simple wounds - DO NOT CALL THIS ON CARBON MOBS, THEY HAVE BODYPARTS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/simple_woundcritroll">simple_woundcritroll</a></th><td>Simple version of crit rolling, attempts to do a critical hit on a mob that uses simple wounds - DO NOT CALL THIS ON CARBON MOBS, THEY HAVE BODYPARTS!</td></tr>
+            <tr><th><a href="mob/living.html#proc/singularity_act">singularity_act</a></th><td>Logs, gibs and returns point values of whatever mob is unfortunate enough to get eaten.</td></tr>
+            <tr><th><a href="mob/living.html#proc/suppress_bloodloss">suppress_bloodloss</a></th><td>BLOOD SYSTEM</td></tr>
+            <tr><th><a href="mob/living.html#proc/transfer_blood_to">transfer_blood_to</a></th><td>BLOOD TRANSFERS</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/rogue_sneaking"><aside class="declaration">var </aside>rogue_sneaking
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_defines.dm#L177">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_defines.dm 177"/></a></h3>
+        <p>*This variable updated in mob_movement.dm primarily. Mainly a shitcode measure for existing shitcode because this is SHITCODE!
+* All it does is track when a mob is sneaking so we don't have to constantly reset alpha values as this fucks with how things are intended to be.
+* if you really need to cancel someone who is sneaking, call update_sneak_invis(TRUE).</p><h3 id="var/simple_embedded_objects"><aside class="declaration">var </aside>simple_embedded_objects
+            <aside>&ndash; /list/obj/item</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 7"/></a></h3>
+        <p>Simple embedded objects with no associated bodyparts</p><h3 id="var/simple_wounds"><aside class="declaration">var </aside>simple_wounds
+            <aside>&ndash; /list/datum/wound</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 3"/></a></h3>
+        <p>Simple wound instances with no associated bodyparts</p><h3 id="var/voice_pitch"><aside class="declaration">var </aside>voice_pitch
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_descriptors.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_descriptors.dm 1"/></a></h3>
+        <p>Voice pitch for audible emotes</p><h2 id="proc">Proc Details</h2><h3 id="proc/AllImmobility"><aside class="declaration">proc </aside>AllImmobility<aside>(amount, updating) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L259">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 259"/></a></aside>
+        </h3>
+        <p>Blanket</p><h3 id="proc/IsFrozen"><aside class="declaration">proc </aside>IsFrozen<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L381">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 381"/></a></aside>
+        </h3>
+        <p>FROZEN</p><h3 id="proc/IsImmobilized"><aside class="declaration">proc </aside>IsImmobilized<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L128">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 128"/></a></aside>
+        </h3>
+        <p>IMMOBILIZED</p><h3 id="proc/IsKnockdown"><aside class="declaration">proc </aside>IsKnockdown<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 75"/></a></aside>
+        </h3>
+        <p>KNOCKDOWN</p><h3 id="proc/IsOffBalanced"><aside class="declaration">proc </aside>IsOffBalanced<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L237">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 237"/></a></aside>
+        </h3>
+        <p>OFF-BALANCED</p><h3 id="proc/IsParalyzed"><aside class="declaration">proc </aside>IsParalyzed<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L183">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 183"/></a></aside>
+        </h3>
+        <p>PARALYZED</p><h3 id="proc/IsStun"><aside class="declaration">proc </aside>IsStun<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 21"/></a></aside>
+        </h3>
+        <p>STUN</p><h3 id="proc/IsUnconscious"><aside class="declaration">proc </aside>IsUnconscious<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L284">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 284"/></a></aside>
+        </h3>
+        <p>UNCONSCIOUS</p><h3 id="proc/Slowdown"><aside class="parent"><a title="/mob" href="mob.html#proc/Slowdown">&uarr;</a></aside>Slowdown<aside>(amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 7"/></a></aside>
+        </h3>
+        <p>Set the slowdown of a mob</p><h3 id="proc/add_quirk"><aside class="declaration">proc </aside>add_quirk<aside>(quirktype, spawn_effects) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L422">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 422"/></a></aside>
+        </h3>
+        <p>DISABILITIES</p><h3 id="proc/add_stun_absorption"><aside class="declaration">proc </aside>add_stun_absorption<aside>(key, duration, priority, message, self_message, examine_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L386">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 386"/></a></aside>
+        </h3>
+        <p>STUN ABSORPTION</p><h3 id="proc/can_look_up"><aside class="declaration">proc </aside>can_look_up<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living.dm#L1878">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living.dm 1878"/></a></aside>
+        </h3>
+        <p>Checks if the user is incapacitated or on cooldown.</p><h3 id="proc/canface"><aside class="parent"><a title="/mob" href="mob.html#proc/canface">&uarr;</a></aside>canface<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/mob.dm#L859">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob.dm 859"/></a></aside>
+        </h3>
+        <p>Checks mobility move as well as parent checks</p><h3 id="proc/cure_blind"><aside class="declaration">proc </aside>cure_blind<aside>(source) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/status_procs.dm#L447">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;status_procs.dm 447"/></a></aside>
+        </h3>
+        <p>TRAIT PROCS</p><h3 id="proc/electrocute_act"><aside class="declaration">proc </aside>electrocute_act<aside>(shock_damage, source, siemens_coeff, flags) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_defense.dm#L520">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_defense.dm 520"/></a></aside>
+        </h3>
+        <p>As the name suggests, this should be called to apply electric shocks.</p><h3 id="proc/get_blood_dna_list"><aside class="declaration">proc </aside>get_blood_dna_list<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/atoms.dm#L619">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms.dm 619"/></a></aside>
+        </h3>
+        <p>returns the mob's dna info as a list, to be inserted in an object's blood_DNA list</p><h3 id="proc/get_embedded_objects"><aside class="declaration">proc </aside>get_embedded_objects<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 8"/></a></aside>
+        </h3>
+        <p>Returns every embedded object we have, simple or not</p><h3 id="proc/get_heretic_symbol"><aside class="declaration">proc </aside>get_heretic_symbol<aside>(/<a href="mob.html">mob</a>/examiner) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/examine.dm#L624">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;examine.dm 624"/></a></aside>
+        </h3>
+        <p>Same as get_heretic_text, but returns a simple symbol depending on the type of heretic!</p><h3 id="proc/get_heretic_text"><aside class="declaration">proc </aside>get_heretic_text<aside>(/<a href="mob.html">mob</a>/examiner) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/examine.dm#L610">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;examine.dm 610"/></a></aside>
+        </h3>
+        <p>Returns patron-related examine text for the mob, if any. Can return null.</p><h3 id="proc/get_sewable_wounds"><aside class="declaration">proc </aside>get_sewable_wounds<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 41"/></a></aside>
+        </h3>
+        <p>Gets all sewable wounds in a mob</p><h3 id="proc/get_track_info"><aside class="declaration">proc </aside>get_track_info<aside>(/<a href="obj.html">obj</a>/<a href="obj/effect/track.html">effect/track</a>/this_track) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/modular_hearthstone/code/game/objects/effects/track.dm#L237">
+        <img src="git.png" width="16" height="16" title="modular_hearthstone&#x2F;code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;track.dm 237"/></a></aside>
+        </h3>
+        <p>Gets special info for a track relative to a mob, such as type and depth. Override if desiring tracking modifier adjustment.</p><h3 id="proc/get_villain_text"><aside class="declaration">proc </aside>get_villain_text<aside>(/<a href="mob.html">mob</a>/examiner) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/carbon/human/examine.dm#L647">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;examine.dm 647"/></a></aside>
+        </h3>
+        <p>Returns antagonist-related examine text for the mob, if any. Can return null.</p><h3 id="proc/get_wounds"><aside class="declaration">proc </aside>get_wounds<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 34"/></a></aside>
+        </h3>
+        <p>Returns every wound we have, simple or not</p><h3 id="proc/has_embedded_object"><aside class="declaration">proc </aside>has_embedded_object<aside>(path, specific) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 19"/></a></aside>
+        </h3>
+        <p>Checks if we have an embedded object of a specific type</p><h3 id="proc/has_embedded_objects"><aside class="declaration">proc </aside>has_embedded_objects<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 15"/></a></aside>
+        </h3>
+        <p>Checks if we have any embedded objects whatsoever</p><h3 id="proc/has_wound"><aside class="declaration">proc </aside>has_wound<aside>(path, specific) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 50"/></a></aside>
+        </h3>
+        <p>Loops through our list of wounds and returns the first wound that is of the type specified by the path</p><h3 id="proc/hasparasites"><aside class="declaration">proc </aside>hasparasites<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/simple_animal/guardian/guardian.dm#L448">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;guardian&#x2F;guardian.dm 448"/></a></aside>
+        </h3>
+        <p>parasite tracking/finding procs</p><h3 id="proc/heal_wounds"><aside class="declaration">proc </aside>heal_wounds<aside>(heal_amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 59"/></a></aside>
+        </h3>
+        <p>Loops through our list of wounds healing them until we run out of healing or all wounds are healed</p><h3 id="proc/hud_set_nanite_indicator"><aside class="declaration">proc </aside>hud_set_nanite_indicator<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/game/data_huds.dm#L279">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;data_huds.dm 279"/></a></aside>
+        </h3>
+        <p>Diagnostic HUDs!</p><h3 id="proc/is_object_embedded"><aside class="declaration">proc </aside>is_object_embedded<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 28"/></a></aside>
+        </h3>
+        <p>Checks if an object is embedded in us</p><h3 id="proc/look_around"><aside class="declaration">proc </aside>look_around<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living.dm#L1888">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living.dm 1888"/></a></aside>
+        </h3>
+        <p>look_up Changes the perspective of the mob to any openspace turf above the mob</p>
+<p>This also checks if an openspace turf is above the mob before looking up or resets the perspective if already looking up</p><h3 id="proc/shared_living_ui_distance"><aside class="declaration">proc </aside>shared_living_ui_distance<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/src_object) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/tgui/states.dm#L106">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;states.dm 106"/></a></aside>
+        </h3>
+        <p>public</p>
+<p>Distance versus interaction check.</p>
+<p>required src_object atom/movable The object which owns the UI.</p>
+<p>return UI_state The state of the UI.</p><h3 id="proc/simple_add_embedded_object"><aside class="declaration">proc </aside>simple_add_embedded_object<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L191">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 191"/></a></aside>
+        </h3>
+        <p>Simple version for adding an embedded object - DO NOT CALL THIS ON CARBON MOBS!</p><h3 id="proc/simple_add_wound"><aside class="declaration">proc </aside>simple_add_wound<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/wound, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 73"/></a></aside>
+        </h3>
+        <p>Simple version for adding a wound - DO NOT CALL THIS ON CARBON MOBS!</p><h3 id="proc/simple_remove_embedded_object"><aside class="declaration">proc </aside>simple_remove_embedded_object<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/embedder) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L205">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 205"/></a></aside>
+        </h3>
+        <p>Simple version for removing an embedded object - DO NOT CALL THIS ON CARBON MOBS!</p><h3 id="proc/simple_remove_wound"><aside class="declaration">proc </aside>simple_remove_wound<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/wound) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L92">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 92"/></a></aside>
+        </h3>
+        <p>Simple version for removing a wound - DO NOT CALL THIS ON CARBON MOBS!</p><h3 id="proc/simple_try_crit"><aside class="declaration">proc </aside>simple_try_crit<aside>(bclass, dam, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, zone_precise, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L157">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 157"/></a></aside>
+        </h3>
+        <p>Tries to do a critical hit on a mob that uses simple wounds - DO NOT CALL THIS ON CARBON MOBS, THEY HAVE BODYPARTS!</p><h3 id="proc/simple_woundcritroll"><aside class="declaration">proc </aside>simple_woundcritroll<aside>(bclass, dam, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, zone_precise, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_wounds.dm#L104">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_wounds.dm 104"/></a></aside>
+        </h3>
+        <p>Simple version of crit rolling, attempts to do a critical hit on a mob that uses simple wounds - DO NOT CALL THIS ON CARBON MOBS, THEY HAVE BODYPARTS!</p><h3 id="proc/singularity_act"><aside class="parent"><a title="/atom" href="atom.html#proc/singularity_act">&uarr;</a></aside>singularity_act<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/living_defense.dm#L549">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;living_defense.dm 549"/></a></aside>
+        </h3>
+        <p>Logs, gibs and returns point values of whatever mob is unfortunate enough to get eaten.</p><h3 id="proc/suppress_bloodloss"><aside class="declaration">proc </aside>suppress_bloodloss<aside>(amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/blood.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;blood.dm 5"/></a></aside>
+        </h3>
+        <p>BLOOD SYSTEM</p><h3 id="proc/transfer_blood_to"><aside class="declaration">proc </aside>transfer_blood_to<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/AM, amount, forced) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/living/blood.dm#L210">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;blood.dm 210"/></a></aside>
+        </h3>
+        <p>BLOOD TRANSFERS</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

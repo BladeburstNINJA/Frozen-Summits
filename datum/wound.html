@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;wound - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/wound.html#var">Var Details</a> - <a href="datum/wound.html#proc">Proc Details</a></header>
+<main>
+<h1>wound <aside>/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 10"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/wound.html#var/bleed_rate">bleed_rate</a></th><td>How much this wound bleeds</td></tr>
+            <tr><th><a href="datum/wound.html#var/bodypart_owner">bodypart_owner</a></th><td>Bodypart that owns this wound, in case it is not a simple one</td></tr>
+            <tr><th><a href="datum/wound.html#var/can_cauterize">can_cauterize</a></th><td>If TRUE, this wound can be cauterized</td></tr>
+            <tr><th><a href="datum/wound.html#var/can_sew">can_sew</a></th><td>If TRUE, this wound can be sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/check_name">check_name</a></th><td>Name that appears on check_for_injuries()</td></tr>
+            <tr><th><a href="datum/wound.html#var/clotting_rate">clotting_rate</a></th><td>Some wounds clot over time, reducing bleeding - This is the rate at which they do so</td></tr>
+            <tr><th><a href="datum/wound.html#var/clotting_threshold">clotting_threshold</a></th><td>Clotting will not go below this amount of bleed_rate</td></tr>
+            <tr><th><a href="datum/wound.html#var/crit_message">crit_message</a></th><td>Crit message(s) to append when this wound is applied in combat</td></tr>
+            <tr><th><a href="datum/wound.html#var/critical">critical</a></th><td>If TRUE, this is a crit wound</td></tr>
+            <tr><th><a href="datum/wound.html#var/disabling">disabling</a></th><td>If TRUE, this disables limbs</td></tr>
+            <tr><th><a href="datum/wound.html#var/embed_chance">embed_chance</a></th><td>Embed chance if this wound allows embedding</td></tr>
+            <tr><th><a href="datum/wound.html#var/mob_overlay">mob_overlay</a></th><td>Overlay to use when this wound is applied to a carbon mob</td></tr>
+            <tr><th><a href="datum/wound.html#var/name">name</a></th><td>Name of the wound, visible to players when inspecting a limb and such</td></tr>
+            <tr><th><a href="datum/wound.html#var/owner">owner</a></th><td>Mob that owns this wound</td></tr>
+            <tr><th><a href="datum/wound.html#var/passive_healing">passive_healing</a></th><td>Amount we heal passively, always</td></tr>
+            <tr><th><a href="datum/wound.html#var/qdel_on_droplimb">qdel_on_droplimb</a></th><td>Some wounds make no sense on a dismembered limb and need to go</td></tr>
+            <tr><th><a href="datum/wound.html#var/severity">severity</a></th><td>Wounds get sorted from highest severity to lowest severity</td></tr>
+            <tr><th><a href="datum/wound.html#var/sew_progress">sew_progress</a></th><td>Sewing progress, because sewing wounds is snowflakey</td></tr>
+            <tr><th><a href="datum/wound.html#var/sew_threshold">sew_threshold</a></th><td>When sew_progress reaches this, the wound is sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_bleed_rate">sewn_bleed_rate</a></th><td>Bleed rate when sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_clotting_rate">sewn_clotting_rate</a></th><td>Clotting rate when sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_clotting_threshold">sewn_clotting_threshold</a></th><td>Clotting will not go below this amount of bleed_rate when sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_overlay">sewn_overlay</a></th><td>Overlay to use when this wound is sewn, and is on a carbon mob</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_whp">sewn_whp</a></th><td>How many &quot;health points&quot; this wound gets after being sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sewn_woundpain">sewn_woundpain</a></th><td>Pain this wound causes after being sewn</td></tr>
+            <tr><th><a href="datum/wound.html#var/sleep_healing">sleep_healing</a></th><td>Amount we heal passively while sleeping</td></tr>
+            <tr><th><a href="datum/wound.html#var/sound_effect">sound_effect</a></th><td>Sound effect(s) to play when this wound is applied</td></tr>
+            <tr><th><a href="datum/wound.html#var/werewolf_infection_probability">werewolf_infection_probability</a></th><td>Werewolf infection probability for bites on this wound</td></tr>
+            <tr><th><a href="datum/wound.html#var/werewolf_infection_time">werewolf_infection_time</a></th><td>Time taken until werewolf infection comes in</td></tr>
+            <tr><th><a href="datum/wound.html#var/werewolf_infection_timer">werewolf_infection_timer</a></th><td>Actual infection timer</td></tr>
+            <tr><th><a href="datum/wound.html#var/whp">whp</a></th><td>How many &quot;health points&quot; this wound has, AKA how hard it is to heal</td></tr>
+            <tr><th><a href="datum/wound.html#var/woundpain">woundpain</a></th><td>How much pain this wound causes while on a mob</td></tr>
+            <tr><th><a href="datum/wound.html#var/zombie_infection_probability">zombie_infection_probability</a></th><td>Zombie infection probability for bites on this wound</td></tr>
+            <tr><th><a href="datum/wound.html#var/zombie_infection_time">zombie_infection_time</a></th><td>Time taken until zombie infection comes in</td></tr>
+            <tr><th><a href="datum/wound.html#var/zombie_infection_timer">zombie_infection_timer</a></th><td>Actual infection timer</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/wound.html#proc/apply_to_bodypart">apply_to_bodypart</a></th><td>Adds this wound to a given bodypart</td></tr>
+            <tr><th><a href="datum/wound.html#proc/apply_to_mob">apply_to_mob</a></th><td>Adds this wound to a given mob</td></tr>
+            <tr><th><a href="datum/wound.html#proc/can_apply_to_bodypart">can_apply_to_bodypart</a></th><td>Returns whether or not this wound can be applied to a given bodypart</td></tr>
+            <tr><th><a href="datum/wound.html#proc/can_apply_to_mob">can_apply_to_mob</a></th><td>Returns whether or not this wound can be applied to a given mob</td></tr>
+            <tr><th><a href="datum/wound.html#proc/can_stack_with">can_stack_with</a></th><td>Returns whether or not this wound can be applied while this other wound is present</td></tr>
+            <tr><th><a href="datum/wound.html#proc/cauterize_wound">cauterize_wound</a></th><td>Cauterizes the wound</td></tr>
+            <tr><th><a href="datum/wound.html#proc/get_check_name">get_check_name</a></th><td>Description of this wound returned to the player when the bodypart is checked with check_for_injuries()</td></tr>
+            <tr><th><a href="datum/wound.html#proc/get_crit_message">get_crit_message</a></th><td>Crit message that should be appended when this wound is applied in combat</td></tr>
+            <tr><th><a href="datum/wound.html#proc/get_sound_effect">get_sound_effect</a></th><td>Sound that plays when this wound is applied to a mob</td></tr>
+            <tr><th><a href="datum/wound.html#proc/get_visible_name">get_visible_name</a></th><td>Description of this wound returned to the player when a bodypart is examined and such</td></tr>
+            <tr><th><a href="datum/wound.html#proc/has_special_infection">has_special_infection</a></th><td>Checks if this wound has a special infection (zombie or werewolf)</td></tr>
+            <tr><th><a href="datum/wound.html#proc/heal_wound">heal_wound</a></th><td>Heals this wound by the given amount, and deletes it if it's healed completely</td></tr>
+            <tr><th><a href="datum/wound.html#proc/is_clotted">is_clotted</a></th><td>Checks if this wound is clotted</td></tr>
+            <tr><th><a href="datum/wound.html#proc/is_sewn">is_sewn</a></th><td>Checks if this wound is sewn</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_bodypart_gain">on_bodypart_gain</a></th><td>Effects when a wound is gained on a bodypart</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_bodypart_loss">on_bodypart_loss</a></th><td>Effects when a wound is lost on a bodypart</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_death">on_death</a></th><td>Called on handle_wounds(), on the life() proc</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_life">on_life</a></th><td>Called on handle_wounds(), on the life() proc</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_mob_gain">on_mob_gain</a></th><td>Effects when this wound is applied to a given mob</td></tr>
+            <tr><th><a href="datum/wound.html#proc/on_mob_loss">on_mob_loss</a></th><td>Effects when this wound is removed from a given mob</td></tr>
+            <tr><th><a href="datum/wound.html#proc/remove_from_bodypart">remove_from_bodypart</a></th><td>Removes this wound from a given bodypart</td></tr>
+            <tr><th><a href="datum/wound.html#proc/remove_from_mob">remove_from_mob</a></th><td>Removes this wound from a given, simpler than adding to a bodypart - No extra effects</td></tr>
+            <tr><th><a href="datum/wound.html#proc/sew_wound">sew_wound</a></th><td>Sews the wound up, changing its properties to the sewn ones</td></tr>
+            <tr><th><a href="datum/wound.html#proc/should_persist">should_persist</a></th><td>Some wounds cannot go away naturally</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/bleed_rate"><aside class="declaration">var </aside>bleed_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 39"/></a></h3>
+        <p>How much this wound bleeds</p><h3 id="var/bodypart_owner"><aside class="declaration">var </aside>bodypart_owner
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 30"/></a></h3>
+        <p>Bodypart that owns this wound, in case it is not a simple one</p><h3 id="var/can_cauterize"><aside class="declaration">var </aside>can_cauterize
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L62">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 62"/></a></h3>
+        <p>If TRUE, this wound can be cauterized</p><h3 id="var/can_sew"><aside class="declaration">var </aside>can_sew
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 60"/></a></h3>
+        <p>If TRUE, this wound can be sewn</p><h3 id="var/check_name"><aside class="declaration">var </aside>check_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 14"/></a></h3>
+        <p>Name that appears on check_for_injuries()</p><h3 id="var/clotting_rate"><aside class="declaration">var </aside>clotting_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 43"/></a></h3>
+        <p>Some wounds clot over time, reducing bleeding - This is the rate at which they do so</p><h3 id="var/clotting_threshold"><aside class="declaration">var </aside>clotting_threshold
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 47"/></a></h3>
+        <p>Clotting will not go below this amount of bleed_rate</p><h3 id="var/crit_message"><aside class="declaration">var </aside>crit_message
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 25"/></a></h3>
+        <p>Crit message(s) to append when this wound is applied in combat</p><h3 id="var/critical"><aside class="declaration">var </aside>critical
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L66">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 66"/></a></h3>
+        <p>If TRUE, this is a crit wound</p><h3 id="var/disabling"><aside class="declaration">var </aside>disabling
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L64">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 64"/></a></h3>
+        <p>If TRUE, this disables limbs</p><h3 id="var/embed_chance"><aside class="declaration">var </aside>embed_chance
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 73"/></a></h3>
+        <p>Embed chance if this wound allows embedding</p><h3 id="var/mob_overlay"><aside class="declaration">var </aside>mob_overlay
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 20"/></a></h3>
+        <p>Overlay to use when this wound is applied to a carbon mob</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 12"/></a></h3>
+        <p>Name of the wound, visible to players when inspecting a limb and such</p><h3 id="var/owner"><aside class="declaration">var </aside>owner
+            <aside>&ndash; /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 32"/></a></h3>
+        <p>Mob that owns this wound</p><h3 id="var/passive_healing"><aside class="declaration">var </aside>passive_healing
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 71"/></a></h3>
+        <p>Amount we heal passively, always</p><h3 id="var/qdel_on_droplimb"><aside class="declaration">var </aside>qdel_on_droplimb
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 76"/></a></h3>
+        <p>Some wounds make no sense on a dismembered limb and need to go</p><h3 id="var/severity"><aside class="declaration">var </aside>severity
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 17"/></a></h3>
+        <p>Wounds get sorted from highest severity to lowest severity</p><h3 id="var/sew_progress"><aside class="declaration">var </aside>sew_progress
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L55">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 55"/></a></h3>
+        <p>Sewing progress, because sewing wounds is snowflakey</p><h3 id="var/sew_threshold"><aside class="declaration">var </aside>sew_threshold
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L57">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 57"/></a></h3>
+        <p>When sew_progress reaches this, the wound is sewn</p><h3 id="var/sewn_bleed_rate"><aside class="declaration">var </aside>sewn_bleed_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 41"/></a></h3>
+        <p>Bleed rate when sewn</p><h3 id="var/sewn_clotting_rate"><aside class="declaration">var </aside>sewn_clotting_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 45"/></a></h3>
+        <p>Clotting rate when sewn</p><h3 id="var/sewn_clotting_threshold"><aside class="declaration">var </aside>sewn_clotting_threshold
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 49"/></a></h3>
+        <p>Clotting will not go below this amount of bleed_rate when sewn</p><h3 id="var/sewn_overlay"><aside class="declaration">var </aside>sewn_overlay
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L22">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 22"/></a></h3>
+        <p>Overlay to use when this wound is sewn, and is on a carbon mob</p><h3 id="var/sewn_whp"><aside class="declaration">var </aside>sewn_whp
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 37"/></a></h3>
+        <p>How many &quot;health points&quot; this wound gets after being sewn</p><h3 id="var/sewn_woundpain"><aside class="declaration">var </aside>sewn_woundpain
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 53"/></a></h3>
+        <p>Pain this wound causes after being sewn</p><h3 id="var/sleep_healing"><aside class="declaration">var </aside>sleep_healing
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 69"/></a></h3>
+        <p>Amount we heal passively while sleeping</p><h3 id="var/sound_effect"><aside class="declaration">var </aside>sound_effect
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 27"/></a></h3>
+        <p>Sound effect(s) to play when this wound is applied</p><h3 id="var/werewolf_infection_probability"><aside class="declaration">var </aside>werewolf_infection_probability
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 11"/></a></h3>
+        <p>Werewolf infection probability for bites on this wound</p><h3 id="var/werewolf_infection_time"><aside class="declaration">var </aside>werewolf_infection_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 13"/></a></h3>
+        <p>Time taken until werewolf infection comes in</p><h3 id="var/werewolf_infection_timer"><aside class="declaration">var </aside>werewolf_infection_timer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 17"/></a></h3>
+        <p>Actual infection timer</p><h3 id="var/whp"><aside class="declaration">var </aside>whp
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 35"/></a></h3>
+        <p>How many &quot;health points&quot; this wound has, AKA how hard it is to heal</p><h3 id="var/woundpain"><aside class="declaration">var </aside>woundpain
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 51"/></a></h3>
+        <p>How much pain this wound causes while on a mob</p><h3 id="var/zombie_infection_probability"><aside class="declaration">var </aside>zombie_infection_probability
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 4"/></a></h3>
+        <p>Zombie infection probability for bites on this wound</p><h3 id="var/zombie_infection_time"><aside class="declaration">var </aside>zombie_infection_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 6"/></a></h3>
+        <p>Time taken until zombie infection comes in</p><h3 id="var/zombie_infection_timer"><aside class="declaration">var </aside>zombie_infection_timer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/the_only_cure.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;the_only_cure.dm 8"/></a></h3>
+        <p>Actual infection timer</p><h2 id="proc">Proc Details</h2><h3 id="proc/apply_to_bodypart"><aside class="declaration">proc </aside>apply_to_bodypart<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L155">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 155"/></a></aside>
+        </h3>
+        <p>Adds this wound to a given bodypart</p><h3 id="proc/apply_to_mob"><aside class="declaration">proc </aside>apply_to_mob<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected, silent, crit_message) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L213">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 213"/></a></aside>
+        </h3>
+        <p>Adds this wound to a given mob</p><h3 id="proc/can_apply_to_bodypart"><aside class="declaration">proc </aside>can_apply_to_bodypart<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L140">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 140"/></a></aside>
+        </h3>
+        <p>Returns whether or not this wound can be applied to a given bodypart</p><h3 id="proc/can_apply_to_mob"><aside class="declaration">proc </aside>can_apply_to_mob<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L204">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 204"/></a></aside>
+        </h3>
+        <p>Returns whether or not this wound can be applied to a given mob</p><h3 id="proc/can_stack_with"><aside class="declaration">proc </aside>can_stack_with<aside>(/<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/other) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L151">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 151"/></a></aside>
+        </h3>
+        <p>Returns whether or not this wound can be applied while this other wound is present</p><h3 id="proc/cauterize_wound"><aside class="declaration">proc </aside>cauterize_wound<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L322">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 322"/></a></aside>
+        </h3>
+        <p>Cauterizes the wound</p><h3 id="proc/get_check_name"><aside class="declaration">proc </aside>get_check_name<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L107">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 107"/></a></aside>
+        </h3>
+        <p>Description of this wound returned to the player when the bodypart is checked with check_for_injuries()</p><h3 id="proc/get_crit_message"><aside class="declaration">proc </aside>get_crit_message<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected_bodypart) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L115">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 115"/></a></aside>
+        </h3>
+        <p>Crit message that should be appended when this wound is applied in combat</p><h3 id="proc/get_sound_effect"><aside class="declaration">proc </aside>get_sound_effect<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected_bodypart) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L134">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 134"/></a></aside>
+        </h3>
+        <p>Sound that plays when this wound is applied to a mob</p><h3 id="proc/get_visible_name"><aside class="declaration">proc </aside>get_visible_name<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L94">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 94"/></a></aside>
+        </h3>
+        <p>Description of this wound returned to the player when a bodypart is examined and such</p><h3 id="proc/has_special_infection"><aside class="declaration">proc </aside>has_special_infection<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L339">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 339"/></a></aside>
+        </h3>
+        <p>Checks if this wound has a special infection (zombie or werewolf)</p><h3 id="proc/heal_wound"><aside class="declaration">proc </aside>heal_wound<aside>(heal_amount) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L279">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 279"/></a></aside>
+        </h3>
+        <p>Heals this wound by the given amount, and deletes it if it's healed completely</p><h3 id="proc/is_clotted"><aside class="declaration">proc </aside>is_clotted<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L335">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 335"/></a></aside>
+        </h3>
+        <p>Checks if this wound is clotted</p><h3 id="proc/is_sewn"><aside class="declaration">proc </aside>is_sewn<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L331">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 331"/></a></aside>
+        </h3>
+        <p>Checks if this wound is sewn</p><h3 id="proc/on_bodypart_gain"><aside class="declaration">proc </aside>on_bodypart_gain<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L179">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 179"/></a></aside>
+        </h3>
+        <p>Effects when a wound is gained on a bodypart</p><h3 id="proc/on_bodypart_loss"><aside class="declaration">proc </aside>on_bodypart_loss<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L199">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 199"/></a></aside>
+        </h3>
+        <p>Effects when a wound is lost on a bodypart</p><h3 id="proc/on_death"><aside class="declaration">proc </aside>on_death<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L275">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 275"/></a></aside>
+        </h3>
+        <p>Called on handle_wounds(), on the life() proc</p><h3 id="proc/on_life"><aside class="declaration">proc </aside>on_life<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L265">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 265"/></a></aside>
+        </h3>
+        <p>Called on handle_wounds(), on the life() proc</p><h3 id="proc/on_mob_gain"><aside class="declaration">proc </aside>on_mob_gain<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L235">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 235"/></a></aside>
+        </h3>
+        <p>Effects when this wound is applied to a given mob</p><h3 id="proc/on_mob_loss"><aside class="declaration">proc </aside>on_mob_loss<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/affected) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L258">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 258"/></a></aside>
+        </h3>
+        <p>Effects when this wound is removed from a given mob</p><h3 id="proc/remove_from_bodypart"><aside class="declaration">proc </aside>remove_from_bodypart<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L186">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 186"/></a></aside>
+        </h3>
+        <p>Removes this wound from a given bodypart</p><h3 id="proc/remove_from_mob"><aside class="declaration">proc </aside>remove_from_mob<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L248">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 248"/></a></aside>
+        </h3>
+        <p>Removes this wound from a given, simpler than adding to a bodypart - No extra effects</p><h3 id="proc/sew_wound"><aside class="declaration">proc </aside>sew_wound<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L303">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 303"/></a></aside>
+        </h3>
+        <p>Sews the wound up, changing its properties to the sewn ones</p><h3 id="proc/should_persist"><aside class="declaration">proc </aside>should_persist<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/datums/wounds/_wound.dm#L343">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound.dm 343"/></a></aside>
+        </h3>
+        <p>Some wounds cannot go away naturally</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

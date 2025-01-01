@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;surgery_step - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/surgery_step.html#var">Var Details</a> - <a href="datum/surgery_step.html#proc">Proc Details</a></header>
+<main>
+<h1>surgery_step <aside>/<a href="datum.html">datum</a>/<a href="datum/surgery_step.html">surgery_step</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 1"/></a></h1>
+
+<p>Check /mob/living/carbon/attackby for how surgery progresses, and also /mob/living/carbon/attack_hand.
+Other important variables are:
+var/list/surgeries (/mob/living)
+var/list/internal_organs (/mob/living/carbon)
+var/list/bodyparts (/mob/living/carbon)</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/accept_any_item">accept_any_item</a></th><td>Does the surgery step accept any item? If true, ignores implements. Compatible with accept_hand.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/accept_hand">accept_hand</a></th><td>Does the surgery step accept open hand? If true, ignores implements. Compatible with accept_any_item.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/chems_needed">chems_needed</a></th><td>list of chems needed to complete the step.
+Even on success, the step will have no effect if there aren't the chems required in the mob.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/desc">desc</a></th><td>Description of the surgery step</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/ignore_clothes">ignore_clothes</a></th><td>This surgery ignores clothes on the targeted bodypart</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/implements">implements</a></th><td>Typepaths or tool behaviors that can be used to perform this surgery step, associated to success chance</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/implements_speed">implements_speed</a></th><td>Typepaths or tool behaviors that can be used to perform this surgery step, associated to speed modification</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/lying_required">lying_required</a></th><td>Does the patient need to be lying down?</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/name">name</a></th><td>Name of the surgery step</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/possible_intents">possible_intents</a></th><td>Intents that can be used to perform this surgery step</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/possible_locs">possible_locs</a></th><td>Body zones this surgery can be performed on, set to null for everywhere</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/repeating">repeating</a></th><td>Repeatable surgery steps will repeat until failure</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/replaced_by">replaced_by</a></th><td>type; doesn't show up if this type exists.
+Set to /datum/surgery_step if you want to hide a &quot;base&quot; surgery  (useful for typing parents IE healing.dm just make sure to null it out again)</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/require_all_chems">require_all_chems</a></th><td>Any chem on the list required, or all of them?</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/required_organs">required_organs</a></th><td>Some surgeries require specific organs to be present in the patient</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/requires_bodypart">requires_bodypart</a></th><td>Does this step require a non-missing bodypart? Incompatible with requires_missing_bodypart</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/requires_bodypart_type">requires_bodypart_type</a></th><td>What type of bodypart we require, in case requires_bodypart</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/requires_missing_bodypart">requires_missing_bodypart</a></th><td>Does this step require the bodypart to be missing? (Limb attachment)</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/requires_real_bodypart">requires_real_bodypart</a></th><td>If true, this surgery step cannot be done on pseudo limbs (like chainsaw arms)</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/requires_tech">requires_tech</a></th><td>Handles techweb-oriented surgeries</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/self_operable">self_operable</a></th><td>Does this step allow self surgery?</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/silicons_obey_prob">silicons_obey_prob</a></th><td>Silicons will ignore the probability of success and always succeed</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/skill_bonuses">skill_bonuses</a></th><td>Modifiers to success chance when you're above the median</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/skill_maluses">skill_maluses</a></th><td>Modifiers to success chance when you're below the median</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/skill_median">skill_median</a></th><td>Skill median used to apply success and speed bonuses</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/skill_min">skill_min</a></th><td>Necessary skill MINIMUM to perform this surgery step, of skill_used</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/skill_used">skill_used</a></th><td>Skill used to perform this surgery step</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/surgery_flags">surgery_flags</a></th><td>Random surgery flags that mostly indicate additional requirements</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/surgery_flags_blocked">surgery_flags_blocked</a></th><td>Random surgery flags blocking certain flags</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/target_mobtypes">target_mobtypes</a></th><td>Acceptable mob types for this surgery</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/time">time</a></th><td>How long does the step take for someone with average skill and an average tool?</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/surgery_step.html#proc/display_results">display_results</a></th><td>Replaces visible_message during operations so only people looking over the surgeon can tell what they're doing, allowing for shenanigans.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#proc/get_chem_string">get_chem_string</a></th><td>Returns a string of the chemicals needed for this surgery step</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/accept_any_item"><aside class="declaration">var </aside>accept_any_item
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 13"/></a></h3>
+        <p>Does the surgery step accept any item? If true, ignores implements. Compatible with accept_hand.</p><h3 id="var/accept_hand"><aside class="declaration">var </aside>accept_hand
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 11"/></a></h3>
+        <p>Does the surgery step accept open hand? If true, ignores implements. Compatible with accept_any_item.</p><h3 id="var/chems_needed"><aside class="declaration">var </aside>chems_needed
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 41"/></a></h3>
+        <p>list of chems needed to complete the step.
+Even on success, the step will have no effect if there aren't the chems required in the mob.</p><h3 id="var/desc"><aside class="declaration">var </aside>desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 5"/></a></h3>
+        <p>Description of the surgery step</p><h3 id="var/ignore_clothes"><aside class="declaration">var </aside>ignore_clothes
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 45"/></a></h3>
+        <p>This surgery ignores clothes on the targeted bodypart</p><h3 id="var/implements"><aside class="declaration">var </aside>implements
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 7"/></a></h3>
+        <p>Typepaths or tool behaviors that can be used to perform this surgery step, associated to success chance</p><h3 id="var/implements_speed"><aside class="declaration">var </aside>implements_speed
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 9"/></a></h3>
+        <p>Typepaths or tool behaviors that can be used to perform this surgery step, associated to speed modification</p><h3 id="var/lying_required"><aside class="declaration">var </aside>lying_required
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 47"/></a></h3>
+        <p>Does the patient need to be lying down?</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 3"/></a></h3>
+        <p>Name of the surgery step</p><h3 id="var/possible_intents"><aside class="declaration">var </aside>possible_intents
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 24"/></a></h3>
+        <p>Intents that can be used to perform this surgery step</p><h3 id="var/possible_locs"><aside class="declaration">var </aside>possible_locs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 26"/></a></h3>
+        <p>Body zones this surgery can be performed on, set to null for everywhere</p><h3 id="var/repeating"><aside class="declaration">var </aside>repeating
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L86">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 86"/></a></h3>
+        <p>Repeatable surgery steps will repeat until failure</p><h3 id="var/replaced_by"><aside class="declaration">var </aside>replaced_by
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L84">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 84"/></a></h3>
+        <p>type; doesn't show up if this type exists.
+Set to /datum/surgery_step if you want to hide a &quot;base&quot; surgery  (useful for typing parents IE healing.dm just make sure to null it out again)</p><h3 id="var/require_all_chems"><aside class="declaration">var </aside>require_all_chems
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 43"/></a></h3>
+        <p>Any chem on the list required, or all of them?</p><h3 id="var/required_organs"><aside class="declaration">var </aside>required_organs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 36"/></a></h3>
+        <p>Some surgeries require specific organs to be present in the patient</p><h3 id="var/requires_bodypart"><aside class="declaration">var </aside>requires_bodypart
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 28"/></a></h3>
+        <p>Does this step require a non-missing bodypart? Incompatible with requires_missing_bodypart</p><h3 id="var/requires_bodypart_type"><aside class="declaration">var </aside>requires_bodypart_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 34"/></a></h3>
+        <p>What type of bodypart we require, in case requires_bodypart</p><h3 id="var/requires_missing_bodypart"><aside class="declaration">var </aside>requires_missing_bodypart
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 30"/></a></h3>
+        <p>Does this step require the bodypart to be missing? (Limb attachment)</p><h3 id="var/requires_real_bodypart"><aside class="declaration">var </aside>requires_real_bodypart
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 32"/></a></h3>
+        <p>If true, this surgery step cannot be done on pseudo limbs (like chainsaw arms)</p><h3 id="var/requires_tech"><aside class="declaration">var </aside>requires_tech
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 79"/></a></h3>
+        <p>Handles techweb-oriented surgeries</p><h3 id="var/self_operable"><aside class="declaration">var </aside>self_operable
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 49"/></a></h3>
+        <p>Does this step allow self surgery?</p><h3 id="var/silicons_obey_prob"><aside class="declaration">var </aside>silicons_obey_prob
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 15"/></a></h3>
+        <p>Silicons will ignore the probability of success and always succeed</p><h3 id="var/skill_bonuses"><aside class="declaration">var </aside>skill_bonuses
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 60"/></a></h3>
+        <p>Modifiers to success chance when you're above the median</p><h3 id="var/skill_maluses"><aside class="declaration">var </aside>skill_maluses
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 69"/></a></h3>
+        <p>Modifiers to success chance when you're below the median</p><h3 id="var/skill_median"><aside class="declaration">var </aside>skill_median
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 58"/></a></h3>
+        <p>Skill median used to apply success and speed bonuses</p><h3 id="var/skill_min"><aside class="declaration">var </aside>skill_min
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 56"/></a></h3>
+        <p>Necessary skill MINIMUM to perform this surgery step, of skill_used</p><h3 id="var/skill_used"><aside class="declaration">var </aside>skill_used
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 54"/></a></h3>
+        <p>Skill used to perform this surgery step</p><h3 id="var/surgery_flags"><aside class="declaration">var </aside>surgery_flags
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 20"/></a></h3>
+        <p>Random surgery flags that mostly indicate additional requirements</p><h3 id="var/surgery_flags_blocked"><aside class="declaration">var </aside>surgery_flags_blocked
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L22">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 22"/></a></h3>
+        <p>Random surgery flags blocking certain flags</p><h3 id="var/target_mobtypes"><aside class="declaration">var </aside>target_mobtypes
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 51"/></a></h3>
+        <p>Acceptable mob types for this surgery</p><h3 id="var/time"><aside class="declaration">var </aside>time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 18"/></a></h3>
+        <p>How long does the step take for someone with average skill and an average tool?</p><h2 id="proc">Proc Details</h2><h3 id="proc/display_results"><aside class="declaration">proc </aside>display_results<aside>(/<a href="mob.html">mob</a>/user, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/target, self_message, detailed_message, vague_message, target_detailed) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L387">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 387"/></a></aside>
+        </h3>
+        <p>Replaces visible_message during operations so only people looking over the surgeon can tell what they're doing, allowing for shenanigans.</p><h3 id="proc/get_chem_string"><aside class="declaration">proc </aside>get_chem_string<aside>() 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/surgery/_surgery_step.dm#L282">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;_surgery_step.dm 282"/></a></aside>
+        </h3>
+        <p>Returns a string of the chemicals needed for this surgery step</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>

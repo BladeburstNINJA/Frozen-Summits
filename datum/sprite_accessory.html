@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;sprite_accessory - FROZEN SUMMIT</title>
+</head>
+<body>
+<header>
+    <a href="index.html">FROZEN SUMMIT</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/sprite_accessory.html#var">Var Details</a> - <a href="datum/sprite_accessory.html#proc">Proc Details</a></header>
+<main>
+<h1>sprite_accessory <aside>/<a href="datum.html">datum</a>/<a href="datum/sprite_accessory.html">sprite_accessory</a></aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/accessory_icon_cache">accessory_icon_cache</a></th><td>List of generated icons based on the [type x icon_state x colors] combination.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/color_key_defaults">color_key_defaults</a></th><td>List of defines for determining which color to use for which key as a default.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/color_key_name">color_key_name</a></th><td>Color key name to describe a single customizable color key.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/color_key_names">color_key_names</a></th><td>List of names for color keys, required if you use more than 1. This is to present the user with how every color will affect the accessory.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/color_keys">color_keys</a></th><td>Amount of color keys this accessory uses.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/default_colors">default_colors</a></th><td>List of explicitly defined default colors which dont derrive from a variable key. A null entry means it will read a color from a key for that index.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/extra_state">extra_state</a></th><td>Whether the states for this accessory have an extra state that will get overlayed ontop of the resulting state. Per layer, suffix &quot;_extra&quot;</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/gendered_variants">gendered_variants</a></th><td>Whether this accessory has gendered variants. This will add either a &quot;m_&quot; or &quot;f_&quot; prefix if TRUE, depending on gender. No prefix if FALSE</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/icon">icon</a></th><td>Icon file of the accessory</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/icon_state">icon_state</a></th><td>Icon state of the accessory</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/layer">layer</a></th><td>Layer of the accessory</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/name">name</a></th><td>Name of the sprite accessories, which may be presented to pick from in the preferences menu</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/pixel_x">pixel_x</a></th><td>Pixel x offset</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/pixel_y">pixel_y</a></th><td>Pixel y offset</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#var/relevant_layers">relevant_layers</a></th><td>Relevant layers. If this is defined, instead of a single image the code will generate an image for each defined layer, with a suffix for the layer.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#proc/get_appearance">get_appearance</a></th><td>Gets the appearance of the sprite accessory as a mutable appearance for an organ on a bodypart.</td></tr>
+            <tr><th><a href="datum/sprite_accessory.html#proc/sanitize_color_string">sanitize_color_string</a></th><td>Generate mutable appearances from the icon</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/accessory_icon_cache"><aside class="declaration">var </aside>accessory_icon_cache
+            <aside>&ndash; /static/list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 32"/></a></h3>
+        <p>List of generated icons based on the [type x icon_state x colors] combination.</p><h3 id="var/color_key_defaults"><aside class="declaration">var </aside>color_key_defaults
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 26"/></a></h3>
+        <p>List of defines for determining which color to use for which key as a default.</p><h3 id="var/color_key_name"><aside class="declaration">var </aside>color_key_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L22">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 22"/></a></h3>
+        <p>Color key name to describe a single customizable color key.</p><h3 id="var/color_key_names"><aside class="declaration">var </aside>color_key_names
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 24"/></a></h3>
+        <p>List of names for color keys, required if you use more than 1. This is to present the user with how every color will affect the accessory.</p><h3 id="var/color_keys"><aside class="declaration">var </aside>color_keys
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 20"/></a></h3>
+        <p>Amount of color keys this accessory uses.</p><h3 id="var/default_colors"><aside class="declaration">var </aside>default_colors
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 28"/></a></h3>
+        <p>List of explicitly defined default colors which dont derrive from a variable key. A null entry means it will read a color from a key for that index.</p><h3 id="var/extra_state"><aside class="declaration">var </aside>extra_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 10"/></a></h3>
+        <p>Whether the states for this accessory have an extra state that will get overlayed ontop of the resulting state. Per layer, suffix &quot;_extra&quot;</p><h3 id="var/gendered_variants"><aside class="declaration">var </aside>gendered_variants
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 30"/></a></h3>
+        <p>Whether this accessory has gendered variants. This will add either a &quot;m_&quot; or &quot;f_&quot; prefix if TRUE, depending on gender. No prefix if FALSE</p><h3 id="var/icon"><aside class="declaration">var </aside>icon
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 6"/></a></h3>
+        <p>Icon file of the accessory</p><h3 id="var/icon_state"><aside class="declaration">var </aside>icon_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 8"/></a></h3>
+        <p>Icon state of the accessory</p><h3 id="var/layer"><aside class="declaration">var </aside>layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 16"/></a></h3>
+        <p>Layer of the accessory</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 4"/></a></h3>
+        <p>Name of the sprite accessories, which may be presented to pick from in the preferences menu</p><h3 id="var/pixel_x"><aside class="declaration">var </aside>pixel_x
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 12"/></a></h3>
+        <p>Pixel x offset</p><h3 id="var/pixel_y"><aside class="declaration">var </aside>pixel_y
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 14"/></a></h3>
+        <p>Pixel y offset</p><h3 id="var/relevant_layers"><aside class="declaration">var </aside>relevant_layers
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 18"/></a></h3>
+        <p>Relevant layers. If this is defined, instead of a single image the code will generate an image for each defined layer, with a suffix for the layer.</p><h2 id="proc">Proc Details</h2><h3 id="proc/get_appearance"><aside class="declaration">proc </aside>get_appearance<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/organ.html">organ</a>/organ, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/bodypart, color_string) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 76"/></a></aside>
+        </h3>
+        <p>Gets the appearance of the sprite accessory as a mutable appearance for an organ on a bodypart.</p><h3 id="proc/sanitize_color_string"><aside class="declaration">proc </aside>sanitize_color_string<aside>(color_string) 
+        
+    
+            <a href="https://github.com/BladeburstNINJA/Frozen-Summits/blob/98e8f0d7790548cc6a7a6243d773141fba0df2ca/code/modules/mob/dead/new_player/sprite_accessory/_sprite_accessory.dm#L122">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;dead&#x2F;new_player&#x2F;sprite_accessory&#x2F;_sprite_accessory.dm 122"/></a></aside>
+        </h3>
+        <p>Generate mutable appearances from the icon</p></main>
+<footer>
+    roguetown.dme
+    <a href="https://github.com/BladeburstNINJA/Frozen-Summits/tree/98e8f0d7790548cc6a7a6243d773141fba0df2ca">98e8f0d</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>
